@@ -1,0 +1,95 @@
+{
+ "builders": [
+  "webflow"
+ ],
+ "libraries": [
+  {
+   "name": "basis",
+   "version": null,
+   "sources": [
+    "https://stefanos.itsoffbrand.io/basis/basis_transcoder.js",
+    "https://stefanos.itsoffbrand.io/basis/basis_transcoder.wasm"
+   ]
+  },
+  {
+   "name": "gsap",
+   "version": "3.14.2",
+   "sources": [
+    "embutido em https://stefanos-nu.vercel.app/app.js"
+   ]
+  },
+  {
+   "name": "gsap/ScrollTrigger",
+   "version": "3.14.2",
+   "sources": [
+    "embutido em https://stefanos-nu.vercel.app/app.js"
+   ]
+  },
+  {
+   "name": "gsap/SplitText",
+   "version": "3.14.2",
+   "sources": [
+    "embutido em https://stefanos-nu.vercel.app/app.js"
+   ]
+  },
+  {
+   "name": "jquery",
+   "version": "3.5.1",
+   "sources": [
+    "página",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=697cbd4d306021d0cc247ad9"
+   ]
+  },
+  {
+   "name": "lenis",
+   "version": null,
+   "sources": [
+    "página"
+   ]
+  },
+  {
+   "name": "lottie",
+   "version": null,
+   "sources": [
+    "embutido em https://stefanos-nu.vercel.app/app.js"
+   ]
+  },
+  {
+   "name": "three",
+   "version": "r182",
+   "sources": [
+    "página"
+   ]
+  }
+ ],
+ "runtime": {
+  "contexts": {
+   "2d": 2,
+   "webgl2": 3
+  },
+  "wasm": 1,
+  "workers": 4,
+  "webgpu": false,
+  "shadowRoots": 0,
+  "canvases": 1
+ },
+ "cssFeatures": [
+  "view transitions"
+ ],
+ "fonts": {
+  "families": [
+   "ABC Diatype",
+   "ABC Diatype Mono"
+  ],
+  "sources": [
+   "self-hosted"
+  ]
+ },
+ "videos": [],
+ "files": {
+  "text": 5,
+  "application": 11,
+  "image": 32,
+  "font": 3
+ }
+}

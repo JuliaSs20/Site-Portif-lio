@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tsitsipas — Design System</title>
+  
+  <style>
+    @font-face {
+      font-family: 'ABC Diatype';
+      src: url('assets/overview/assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6981e176133f751073e93c39_ABCDiatype-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'ABC Diatype';
+      src: url('assets/overview/assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6981e1764ed0c80cb322292b_ABCDiatype-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'ABC Diatype Mono';
+      src: url('assets/overview/assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6981e1980f8bcf10463452c4_ABCDiatypeMono-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --color--white: #fffdf0;
+      --color--charcoal: #1a1a1a;
+      --color--blue: #056beb;
+      --color--yellow: #efff44;
+      --color--gray: #626262;
+      --color--dark-blue: #02224c;
+      --color--blue-white: #d0ecff;
+      --color--light-gray: #b0b0b0;
+      --color--error: #f62d00;
+      --color--success: #52d36a;
+      
+      --ds-bg: #0b0c10;
+      --ds-surface: #14161d;
+      --ds-surface-elevated: #1a1e27;
+      --ds-border: rgba(255, 255, 255, 0.12);
+      --ds-border-light: rgba(255, 255, 255, 0.22);
+      --ds-text: #fffdf0;
+      --ds-text-dim: #9aa0a6;
+      --ds-blue: #056beb;
+      
+      --ds-font-main: 'ABC Diatype', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --ds-font-mono: 'ABC Diatype Mono', monospace;
+      --cubic-default: cubic-bezier(0.4, 0, 0, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--ds-bg);
+      color: var(--ds-text);
+      font-family: var(--ds-font-main);
+    }
+
+    .ds-shell {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    /* Top Catalog Bar */
+    .ds-navbar {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      background: rgba(11, 12, 16, 0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--ds-border);
+      z-index: 1000;
+      flex-shrink: 0;
+    }
+
+    .ds-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .ds-brand-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+
+    .ds-brand-badge {
+      font-family: var(--ds-font-mono);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 2px;
+      color: var(--ds-text-dim);
+    }
+
+    .ds-tabs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 4px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .ds-tab-btn {
+      font-family: var(--ds-font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.4rem 1.1rem;
+      border-radius: 4px;
+      border: none;
+      background: transparent;
+      color: var(--ds-text-dim);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .ds-tab-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .ds-tab-btn.is-active {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.14);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
+
+    /* Content Area */
+    .ds-view-container {
+      flex: 1;
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 60px);
+      overflow: hidden;
+    }
+
+    .ds-view-overview {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+    }
+
+    .ds-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* ----------------------------------------------------
+       Phase 2: Components View
+       ---------------------------------------------------- */
+    .ds-view-components {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: var(--color--charcoal);
+      color: var(--color--white);
+      overflow: hidden;
+    }
+
+    /* Two-column layout with sticky left sidebar */
+    .ds-components-layout {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    .ds-sidebar {
+      width: 250px;
+      flex-shrink: 0;
+      background: rgba(18, 19, 23, 0.85);
+      backdrop-filter: blur(20px);
+      border-right: 1px solid var(--ds-border);
+      padding: 1.5rem 1rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .ds-sidebar-title {
+      font-family: var(--ds-font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ds-text-dim);
+      padding: 0 0.75rem 0.6rem;
+      border-bottom: 1px solid var(--ds-border);
+      margin-bottom: 0.5rem;
+    }
+
+    .ds-nav-item {
+      font-family: var(--ds-font-mono);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #9aa0a6;
+      text-decoration: none;
+      padding: 0.6rem 0.75rem;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .ds-nav-item:hover, .ds-nav-item.is-active {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .ds-nav-count {
+      font-size: 0.7rem;
+      opacity: 0.6;
+    }
+
+    .ds-main-content {
+      flex: 1;
+      height: 100%;
+      overflow-y: auto;
+      padding: 3rem 4rem 6rem;
+      position: relative;
+      scroll-behavior: smooth;
+    }
+
+    /* Background animated specimen wrapper */
+    .ds-bg-canvas-container {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      border: 1px solid var(--ds-border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+
+    .ds-bg-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Specimen Sections */
+    .ds-section {
+      margin-bottom: 5rem;
+      scroll-margin-top: 2rem;
+    }
+
+    .ds-section-header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--ds-border);
+      padding-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .ds-section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+
+    .ds-section-tag {
+      font-family: var(--ds-font-mono);
+      font-size: 0.75rem;
+      color: var(--color--blue);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Typography 3-Column format */
+    .ds-type-row {
+      display: grid;
+      grid-template-columns: 240px 1fr 140px;
+      align-items: baseline;
+      padding: 1.8rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      gap: 1.5rem;
+    }
+
+    .ds-type-meta {
+      font-family: var(--ds-font-mono);
+      font-size: 0.8rem;
+    }
+
+    .ds-type-role {
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .ds-type-family {
+      color: var(--ds-text-dim);
+      font-size: 0.75rem;
+    }
+
+    .ds-type-size {
+      font-family: var(--ds-font-mono);
+      font-size: 0.8rem;
+      color: var(--color--yellow);
+      text-align: right;
+      letter-spacing: 0.05em;
+    }
+
+    /* Colors Grid */
+    .ds-color-groups {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .ds-color-group-title {
+      font-family: var(--ds-font-mono);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ds-text-dim);
+      margin-bottom: 1rem;
+    }
+
+    .ds-color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .ds-color-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--ds-border);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ds-swatch {
+      height: 80px;
+      width: 100%;
+      position: relative;
+    }
+
+    .ds-color-details {
+      padding: 0.85rem;
+      font-family: var(--ds-font-mono);
+      font-size: 0.78rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .ds-color-label {
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .ds-color-token {
+      color: var(--color--blue-white);
+      font-size: 0.72rem;
+    }
+
+    .ds-color-val {
+      color: var(--ds-text-dim);
+      font-size: 0.7rem;
+    }
+
+    .ds-color-use {
+      font-size: 0.7rem;
+      color: #888;
+      margin-top: 0.2rem;
+    }
+
+    /* Surfaces */
+    .ds-surface-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .ds-surface-specimen {
+      padding: 2rem;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 140px;
+    }
+
+    /* Icons 5-column grid */
+    .ds-icon-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+    }
+
+    .ds-icon-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem 1rem;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--ds-border);
+      border-radius: 4px;
+      gap: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .ds-icon-cell:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: var(--ds-border-light);
+    }
+
+    .ds-icon-code {
+      font-family: var(--ds-font-mono);
+      font-size: 0.7rem;
+      color: var(--ds-text-dim);
+      text-align: center;
+    }
+
+    /* Reusable Source Components */
+    .ds-comp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .ds-comp-item {
+      border: 1px solid var(--ds-border);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.02);
+      padding: 2rem;
+    }
+
+    .ds-comp-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 0.75rem;
+    }
+
+    .ds-comp-name {
+      font-family: var(--ds-font-mono);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .ds-comp-selector {
+      font-family: var(--ds-font-mono);
+      font-size: 0.75rem;
+      color: var(--color--blue-white);
+      background: rgba(5, 107, 235, 0.15);
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+
+    .ds-comp-preview {
+      padding: 1.5rem;
+      background: #14161d;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* Component CSS overrides from Source */
+    .source-btn-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fffdf0;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0, 1);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .source-btn-wrap:hover {
+      border-color: #efff44;
+      color: #efff44;
+      transform: translateY(-2px);
+    }
+
+    .source-nav-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-family: var(--ds-font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      background: #02224c;
+      color: #d0ecff;
+    }
+
+    .source-stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      border-left: 2px solid var(--color--blue);
+      padding-left: 1rem;
+    }
+
+    .source-stat-label {
+      font-family: var(--ds-font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--color--blue-white);
+      letter-spacing: 0.05em;
+    }
+
+    .source-stat-val {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #fffdf0;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="ds-shell">
+    <header class="ds-navbar">
+      <a href="#overview" class="ds-brand">
+        <span class="ds-brand-title">Tsitsipas</span>
+        <span class="ds-brand-badge">Design System</span>
+      </a>
+
+      <nav class="ds-tabs">
+        <a href="#overview" id="tab-overview" class="ds-tab-btn is-active">
+          <span>Overview</span>
+        </a>
+        <a href="#components" id="tab-components" class="ds-tab-btn">
+          <span>Components</span>
+        </a>
+      </nav>
+
+      <div style="font-family: var(--ds-font-mono); font-size: 0.72rem; color: var(--ds-text-dim);">
+        Phase 2 • Source-Backed Catalog [file://]
+      </div>
+    </header>
+
+    <main class="ds-view-container">
+      <!-- Overview View -->
+      <section id="view-overview" class="ds-view-overview">
+        <iframe src="assets/overview/index.html" class="ds-iframe" title="Tsitsipas Overview Adaptation"></iframe>
+      </section>
+
+      <!-- Components View -->
+      <section id="view-components" class="ds-view-components">
+        <div class="ds-components-layout">
+          <!-- Sticky Left Sidebar -->
+          <aside class="ds-sidebar">
+            <div class="ds-sidebar-title">Design Foundations</div>
+            <a href="#foundations-typography" class="ds-nav-item is-active">
+              <span>Typography</span>
+              <span class="ds-nav-count">8</span>
+            </a>
+            <a href="#foundations-colors" class="ds-nav-item">
+              <span>Colors</span>
+              <span class="ds-nav-count">14</span>
+            </a>
+            <a href="#foundations-backgrounds" class="ds-nav-item">
+              <span>Backgrounds</span>
+              <span class="ds-nav-count">2</span>
+            </a>
+            <a href="#foundations-surfaces" class="ds-nav-item">
+              <span>Surfaces</span>
+              <span class="ds-nav-count">4</span>
+            </a>
+            <a href="#foundations-icons" class="ds-nav-item">
+              <span>Icons</span>
+              <span class="ds-nav-count">6</span>
+            </a>
+
+            <div class="ds-sidebar-title" style="margin-top: 1.5rem;">Components</div>
+            <a href="#comp-navigation" class="ds-nav-item">
+              <span>Navigation</span>
+              <span class="ds-nav-count">3</span>
+            </a>
+            <a href="#comp-actions" class="ds-nav-item">
+              <span>Actions & Buttons</span>
+              <span class="ds-nav-count">4</span>
+            </a>
+            <a href="#comp-data-display" class="ds-nav-item">
+              <span>Data Display</span>
+              <span class="ds-nav-count">3</span>
+            </a>
+            <a href="#comp-forms" class="ds-nav-item">
+              <span>Inputs & Forms</span>
+              <span class="ds-nav-count">2</span>
+            </a>
+          </aside>
+
+          <!-- Main Scrollable Specimen Area -->
+          <div class="ds-main-content">
+            
+            <!-- TYPOGRAPHY -->
+            <section id="foundations-typography" class="ds-section">
+              <div class="ds-section-header">
+                <h2 class="ds-section-title">Typography</h2>
+                <span class="ds-section-tag">ABC Diatype / Diatype Mono</span>
+              </div>
+
+              <!-- Heading 1 -->
+              <div class="ds-type-row">
+                <div class="ds-type-meta">
+                  <div class="ds-type-role">Heading 1 (Hero Title)</div>
+                  <div class="ds-type-family">ABC Diatype • Bold 700</div>
+                  <div style="color: #666; font-size: 0.7rem; margin-top: 4px;">.u-h1</div>
+                </div>
+                <div class="ds-type-specimen" style="font-family: 'ABC Diatype'; font-size: 3.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.9;">
+                  TSITSIPAS
+                </div>
+                <div class="ds-type-size">6em | 3em</div>
+              </div>
+
+              <!-- Heading 2 -->
+              <div class="ds-type-row">
+                <div class="ds-type-meta">
+                  <div class="ds-type-role">Heading 2 (Section Title)</div>
+                  <div class="ds-type-family">ABC Diatype • Bold 700</div>
+                  <div style="color: #666; font-size: 0.7rem; margin-top: 4px;">.u-h2</div>
+                </div>
+                <div class="ds-type-specimen" style="font-family: 'ABC Diatype'; font-size: 2.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: -0.03em; line-height: 1;">
+                  FAMILY LEGACY
+                </div>
+                <div class="ds-type-size">4em | 2.5em</div>
+              </div>
+
+              <!-- Heading 3 -->
+              <div class="ds-type-row">
+                <div class="ds-type-meta">
+                  <div class="ds-type-role">Heading 3 (Editorial Headline)</div>
+                  <div class="ds-type-family">ABC Diatype • Bold 700</div>
+                  <div style="color: #666; font-size: 0.7rem; margin-top: 4px;">.u-h3</div>
+                </div>
+                <div class="ds-type-specimen" style="font-family: 'ABC Diatype'; font-size: 1.8rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1;">
+                  Precision Athletic Craft
+                </div>
+                <div class="ds-type-size">2.5em | 2em</div>
+              </div>
+
+              <!-- Heading 4 -->
+              <div class="ds-type-row">
+                <div class="ds-type-meta">
+                  <div class="ds-type-role">Heading 4 (Brand Logo & Menu)</div>
+                  <div class="ds-type-family">ABC Diatype • Bold 700</div>
+                  <div style="color: #666; font-size: 0.7rem; margin-top: 4px;">.u-h4</div>
+                </div>
+                <div class="ds-type-specimen" style="font-family: 'ABC Diatype'; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: -0.03em; line-height: 1;">
+                  Stefanos Tsitsipas
+                </div>
+                <div class="ds-type-size">2em | 1.5em</div>
+              </div>
+
+              <!-- Mono XL -->
+              <div class="ds-type-row">
+                <div class="ds-type-meta">
+                  <div class="ds-type-role">Mono Display (Scores / Numbers)</div>
+                  <div class="ds-type-family">ABC Diatype Mono • Regular 400</div>
+                  <div style="color: #666; font-size: 0.7rem; margin-top: 4px;">.text-mono-xl</div>
+                </div>
+                <div class="ds-type-specimen" style="font-family: 'ABC Diatype Mono'; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.2;">
+                  #03 ATP
+                </div>
+                <div class="ds-type-size">3em</div>
+              </div>
+
+              <!-- Mono Medium -->
+              <div class="ds-type-row">
+                <div class="ds-type-meta">
+                  <div class="ds-type-role">Mono Medium (Labels & Stats)</div>
+                  <div class="ds-type-family">ABC Diatype Mono • Regular 400</div>
+                  <div style="color: #666; font-size: 0.7rem; margin-top: 4px;">.text-mono-md</div>
+                </div>
+                <div class="ds-type-specimen" style="font-family: 'ABC Diatype Mono'; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.2;">
+                  TOURNAMENT RECORD 2024
+                </div>
+                <div class="ds-type-size">1.125em</div>
+              </div>
+
+              <!-- Mono Small -->
+              <div class="ds-type-row">
+                <div class="ds-type-meta">
+                  <div class="ds-type-role">Mono Small (Meta, Eyebrows)</div>
+                  <div class="ds-type-family">ABC Diatype Mono • Medium 500</div>
+                  <div style="color: #666; font-size: 0.7rem; margin-top: 4px;">.text-mono-sm</div>
+                </div>
+                <div class="ds-type-specimen" style="font-family: 'ABC Diatype Mono'; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.015em; line-height: 1;">
+                  Date of birth • August 12th, 1998
+                </div>
+                <div class="ds-type-size">0.75em</div>
+              </div>
+
+              <!-- Text Detail -->
+              <div class="ds-type-row">
+                <div class="ds-type-meta">
+                  <div class="ds-type-role">Text Detail (Spec Values)</div>
+                  <div class="ds-type-family">ABC Diatype • Bold 700</div>
+                  <div style="color: #666; font-size: 0.7rem; margin-top: 4px;">.u-text-detail</div>
+                </div>
+                <div class="ds-type-specimen" style="font-family: 'ABC Diatype'; font-size: 0.9375rem; text-transform: uppercase; letter-spacing: -0.015em; line-height: 1;">
+                  Monte-Carlo Masters Champion
+                </div>
+                <div class="ds-type-size">0.75em | 0.9375em</div>
+              </div>
+            </section>
+
+            <!-- COLORS -->
+            <section id="foundations-colors" class="ds-section">
+              <div class="ds-section-header">
+                <h2 class="ds-section-title">Colors</h2>
+                <span class="ds-section-tag">Functional Palette</span>
+              </div>
+
+              <div class="ds-color-groups">
+                <!-- Brand and Accent -->
+                <div>
+                  <div class="ds-color-group-title">Brand & Accent</div>
+                  <div class="ds-color-grid">
+                    <div class="ds-color-card">
+                      <div class="ds-swatch" style="background: #056beb;"></div>
+                      <div class="ds-color-details">
+                        <span class="ds-color-label">Electric Brand Blue</span>
+                        <span class="ds-color-token">--color--blue</span>
+                        <span class="ds-color-val">#056beb</span>
+                        <span class="ds-color-use">Primary accent, active indicators, menu dots</span>
+                      </div>
+                    </div>
+
+                    <div class="ds-color-card">
+                      <div class="ds-swatch" style="background: #efff44;"></div>
+                      <div class="ds-color-details">
+                        <span class="ds-color-label">Tennis Volt Accent</span>
+                        <span class="ds-color-token">--color--yellow</span>
+                        <span class="ds-color-val">#efff44</span>
+                        <span class="ds-color-use">Hover states, kinetic highlights, tennis markers</span>
+                      </div>
+                    </div>
+
+                    <div class="ds-color-card">
+                      <div class="ds-swatch" style="background: #02224c;"></div>
+                      <div class="ds-color-details">
+                        <span class="ds-color-label">Deep Court Navy</span>
+                        <span class="ds-color-token">--color--dark-blue</span>
+                        <span class="ds-color-val">#02224c</span>
+                        <span class="ds-color-use">Secondary dark surface and badge backgrounds</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Surfaces & Canvas -->
+                <div>
+                  <div class="ds-color-group-title">Surfaces & Canvas</div>
+                  <div class="ds-color-grid">
+                    <div class="ds-color-card">
+                      <div class="ds-swatch" style="background: #1a1a1a; border-bottom: 1px solid #333;"></div>
+                      <div class="ds-color-details">
+                        <span class="ds-color-label">Charcoal Canvas</span>
+                        <span class="ds-color-token">--color--charcoal</span>
+                        <span class="ds-color-val">#1a1a1a</span>
+                        <span class="ds-color-use">Main page background and deep cards</span>
+                      </div>
+                    </div>
+
+                    <div class="ds-color-card">
+                      <div class="ds-swatch" style="background: #0b0c10;"></div>
+                      <div class="ds-color-details">
+                        <span class="ds-color-label">Void Surface</span>
+                        <span class="ds-color-token">--ds-bg</span>
+                        <span class="ds-color-val">#0b0c10</span>
+                        <span class="ds-color-use">Catalog shell and 3D viewport canvas background</span>
+                      </div>
+                    </div>
+
+                    <div class="ds-color-card">
+                      <div class="ds-swatch" style="background: #2d2d2d;"></div>
+                      <div class="ds-color-details">
+                        <span class="ds-color-label">Elevated Dark Slate</span>
+                        <span class="ds-color-token">--color--gradient-dark</span>
+                        <span class="ds-color-val">#2d2d2d</span>
+                        <span class="ds-color-use">Surface cards, overlays, and subtle card tiles</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Text & Icons -->
+                <div>
+                  <div class="ds-color-group-title">Text & Icons</div>
+                  <div class="ds-color-grid">
+                    <div class="ds-color-card">
+                      <div class="ds-swatch" style="background: #fffdf0;"></div>
+                      <div class="ds-color-details">
+                        <span class="ds-color-label">Warm Chalk White</span>
+                        <span class="ds-color-token">--color--white</span>
+                        <span class="ds-color-val">#fffdf0</span>
+                        <span class="ds-color-use">Primary text, titles, headings, high contrast</span>
+                      </div>
+                    </div>
+
+                    <div class="ds-color-card">
+                      <div class="ds-swatch" style="background: #d0ecff;"></div>
+                      <div class="ds-color-details">
+                        <span class="ds-color-label">Ice Blue Text</span>
+                        <span class="ds-color-token">--color--blue-white</span>
+                        <span class="ds-color-val">#d0ecff</span>
+                        <span class="ds-color-use">Meta labels, match scores, secondary headers</span>
+                      </div>
+                    </div>
+
+                    <div class="ds-color-card">
+                      <div class="ds-swatch" style="background: #626262;"></div>
+                      <div class="ds-color-details">
+                        <span class="ds-color-label">Neutral Medium Gray</span>
+                        <span class="ds-color-token">--color--gray</span>
+                        <span class="ds-color-val">#626262</span>
+                        <span class="ds-color-use">Secondary copy, disabled items, captions</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Borders & Overlays -->
+                <div>
+                  <div class="ds-color-group-title">Borders & Alpha Overlays</div>
+                  <div class="ds-color-grid">
+                    <div class="ds-color-card">
+                      <div class="ds-swatch" style="background: rgba(255, 253, 240, 0.25);"></div>
+                      <div class="ds-color-details">
+                        <span class="ds-color-label">Chalk Border Alpha</span>
+                        <span class="ds-color-token">--color--white-25</span>
+                        <span class="ds-color-val">rgba(255, 253, 240, 0.25)</span>
+                        <span class="ds-color-use">Card outlines, dividers, subtle grid separators</span>
+                      </div>
+                    </div>
+
+                    <div class="ds-color-card">
+                      <div class="ds-swatch" style="background: rgba(2, 34, 76, 0.25);"></div>
+                      <div class="ds-color-details">
+                        <span class="ds-color-label">Dark Blue Alpha</span>
+                        <span class="ds-color-token">--color--dark-blue-25</span>
+                        <span class="ds-color-val">rgba(2, 34, 76, 0.25)</span>
+                        <span class="ds-color-use">Backdrop blurs, floating navigation badges</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- BACKGROUNDS -->
+            <section id="foundations-backgrounds" class="ds-section">
+              <div class="ds-section-header">
+                <h2 class="ds-section-title">Backgrounds</h2>
+                <span class="ds-section-tag">WebGL 3D & Static Canvas</span>
+              </div>
+
+              <div>
+                <p style="font-family: var(--ds-font-mono); font-size: 0.8rem; color: var(--ds-text-dim); margin-bottom: 0.75rem;">
+                  Interactive WebGL 3D Court (Live runtime instance from Overview):
+                </p>
+                <div class="ds-bg-canvas-container">
+                  <iframe src="assets/overview/index.html" class="ds-bg-iframe" title="Live 3D Background Specimen"></iframe>
+                </div>
+              </div>
+            </section>
+
+            <!-- SURFACES -->
+            <section id="foundations-surfaces" class="ds-section">
+              <div class="ds-section-header">
+                <h2 class="ds-section-title">Surfaces</h2>
+                <span class="ds-section-tag">Elevation & Glassmorphism</span>
+              </div>
+
+              <div class="ds-surface-grid">
+                <div class="ds-surface-specimen" style="background: #1a1a1a; border: 1px solid rgba(255, 253, 240, 0.15);">
+                  <div>
+                    <h4 style="font-size: 1rem; text-transform: uppercase; margin-bottom: 0.5rem;">Base Dark Surface</h4>
+                    <p style="font-family: var(--ds-font-mono); font-size: 0.75rem; color: #888;">Solid #1a1a1a with 1px chalk border</p>
+                  </div>
+                  <div style="font-family: var(--ds-font-mono); font-size: 0.7rem; color: var(--color--blue);">.content-dark__slot</div>
+                </div>
+
+                <div class="ds-surface-specimen" style="background: rgba(11, 12, 16, 0.85); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1);">
+                  <div>
+                    <h4 style="font-size: 1rem; text-transform: uppercase; margin-bottom: 0.5rem;">Frosted Glass Nav Surface</h4>
+                    <p style="font-family: var(--ds-font-mono); font-size: 0.75rem; color: #888;">rgba(11, 12, 16, 0.85) • backdrop-filter blur(16px)</p>
+                  </div>
+                  <div style="font-family: var(--ds-font-mono); font-size: 0.7rem; color: var(--color--blue);">.nav-w</div>
+                </div>
+
+                <div class="ds-surface-specimen" style="background: #02224c; border-radius: 4px; border: 1px solid rgba(208, 236, 255, 0.2);">
+                  <div>
+                    <h4 style="font-size: 1rem; text-transform: uppercase; margin-bottom: 0.5rem;">Navy Court Pill Surface</h4>
+                    <p style="font-family: var(--ds-font-mono); font-size: 0.75rem; color: #888;">#02224c with ice blue border accent</p>
+                  </div>
+                  <div style="font-family: var(--ds-font-mono); font-size: 0.7rem; color: var(--color--blue);">.nav__match-cms</div>
+                </div>
+              </div>
+            </section>
+
+            <!-- ICONS -->
+            <section id="foundations-icons" class="ds-section">
+              <div class="ds-section-header">
+                <h2 class="ds-section-title">Icons</h2>
+                <span class="ds-section-tag">Direct SVG Grid (5-col)</span>
+              </div>
+
+              <div class="ds-icon-grid">
+                <!-- Close / Hamburger Menu -->
+                <div class="ds-icon-cell">
+                  <svg width="24" height="24" viewBox="0 0 32 32" fill="none" stroke="#fffdf0" stroke-width="2">
+                    <line x1="4" y1="10" x2="28" y2="10"></line>
+                    <line x1="4" y1="22" x2="28" y2="22"></line>
+                  </svg>
+                  <div class="ds-icon-code">icon-menu</div>
+                </div>
+
+                <!-- Close cross -->
+                <div class="ds-icon-cell">
+                  <svg width="24" height="24" viewBox="0 0 32 32" fill="none" stroke="#fffdf0" stroke-width="2">
+                    <line x1="8" y1="8" x2="24" y2="24"></line>
+                    <line x1="24" y1="8" x2="8" y2="24"></line>
+                  </svg>
+                  <div class="ds-icon-code">icon-close</div>
+                </div>
+
+                <!-- Arrow Right -->
+                <div class="ds-icon-cell">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fffdf0" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                  <div class="ds-icon-code">arrow-right</div>
+                </div>
+
+                <!-- Chevron Down -->
+                <div class="ds-icon-cell">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fffdf0" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                  <div class="ds-icon-code">chevron-down</div>
+                </div>
+
+                <!-- External Link -->
+                <div class="ds-icon-cell">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fffdf0" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <div class="ds-icon-code">link-external</div>
+                </div>
+
+                <!-- Play dot -->
+                <div class="ds-icon-cell">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="#056beb">
+                    <circle cx="12" cy="12" r="6"></circle>
+                  </svg>
+                  <div class="ds-icon-code">status-live</div>
+                </div>
+              </div>
+            </section>
+
+            <!-- NAVIGATION COMPONENTS -->
+            <section id="comp-navigation" class="ds-section">
+              <div class="ds-section-header">
+                <h2 class="ds-section-title">Navigation Components</h2>
+                <span class="ds-section-tag">Source Reusable Units</span>
+              </div>
+
+              <div class="ds-comp-list">
+                <!-- Nav Brand Logo -->
+                <div class="ds-comp-item">
+                  <div class="ds-comp-meta">
+                    <span class="ds-comp-name">Stacked Wordmark Logo</span>
+                    <span class="ds-comp-selector">.nav__logo</span>
+                  </div>
+                  <div class="ds-comp-preview">
+                    <div style="display: flex; flex-direction: column; font-family: 'ABC Diatype'; font-weight: 700; text-transform: uppercase; line-height: 0.9; cursor: pointer;">
+                      <span style="font-size: 1.25rem;">Stefanos</span>
+                      <span style="font-size: 1.25rem; margin-left: 0.8rem; color: #efff44;">Tsitsipas</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Nav Menu Trigger & Pill -->
+                <div class="ds-comp-item">
+                  <div class="ds-comp-meta">
+                    <span class="ds-comp-name">Interactive Menu Button</span>
+                    <span class="ds-comp-selector">.nav__menu-w</span>
+                  </div>
+                  <div class="ds-comp-preview">
+                    <div style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.4rem 1.2rem; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: 999px; cursor: pointer;">
+                      <span style="width: 8px; height: 8px; background: #056beb; border-radius: 50%;"></span>
+                      <span style="font-family: var(--ds-font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500;">Menu</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Match Badge -->
+                <div class="ds-comp-item">
+                  <div class="ds-comp-meta">
+                    <span class="ds-comp-name">Match Info Status Pill</span>
+                    <span class="ds-comp-selector">.nav__match-cms</span>
+                  </div>
+                  <div class="ds-comp-preview">
+                    <div class="source-nav-pill">
+                      <span style="color: #99b5cb;">Next Match:</span>
+                      <span style="color: #fff; font-weight: 700;">Coming Soon</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- ACTIONS & BUTTONS -->
+            <section id="comp-actions" class="ds-section">
+              <div class="ds-section-header">
+                <h2 class="ds-section-title">Actions & Buttons</h2>
+                <span class="ds-section-tag">Button Families & States</span>
+              </div>
+
+              <div class="ds-comp-list">
+                <!-- Primary Outline Kinetic Button -->
+                <div class="ds-comp-item">
+                  <div class="ds-comp-meta">
+                    <span class="ds-comp-name">Athletic Kinetic Outline Button</span>
+                    <span class="ds-comp-selector">[data-css="btn"] .btn-w</span>
+                  </div>
+                  <div class="ds-comp-preview">
+                    <a href="javascript:void(0)" class="source-btn-wrap">
+                      <span>Explore Career</span>
+                      <span style="font-size: 1.1rem; line-height: 1;">&rarr;</span>
+                    </a>
+
+                    <a href="javascript:void(0)" class="source-btn-wrap" style="border-color: #056beb; color: #d0ecff;">
+                      <span>On Court Stats</span>
+                      <span style="font-size: 1.1rem; line-height: 1;">&rarr;</span>
+                    </a>
+
+                    <a href="javascript:void(0)" class="source-btn-wrap" style="opacity: 0.4; cursor: not-allowed;">
+                      <span>Disabled State</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- DATA DISPLAY -->
+            <section id="comp-data-display" class="ds-section">
+              <div class="ds-section-header">
+                <h2 class="ds-section-title">Data Display</h2>
+                <span class="ds-section-tag">Stats & Specification Columns</span>
+              </div>
+
+              <div class="ds-comp-list">
+                <div class="ds-comp-item">
+                  <div class="ds-comp-meta">
+                    <span class="ds-comp-name">Athletic Stat Grid Column</span>
+                    <span class="ds-comp-selector">.hero-home__col</span>
+                  </div>
+                  <div class="ds-comp-preview" style="gap: 4rem;">
+                    <div class="source-stat-item">
+                      <span class="source-stat-label">ATP Ranking</span>
+                      <span class="source-stat-val">Career High #3</span>
+                    </div>
+
+                    <div class="source-stat-item">
+                      <span class="source-stat-label">Height / Reach</span>
+                      <span class="source-stat-val">193 CM / 6'4"</span>
+                    </div>
+
+                    <div class="source-stat-item">
+                      <span class="source-stat-label">Plays</span>
+                      <span class="source-stat-val">Right-Handed (1H-BH)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- INPUTS & FORMS -->
+            <section id="comp-forms" class="ds-section">
+              <div class="ds-section-header">
+                <h2 class="ds-section-title">Inputs & Forms</h2>
+                <span class="ds-section-tag">Athletic Form Elements</span>
+              </div>
+
+              <div class="ds-comp-list">
+                <div class="ds-comp-item">
+                  <div class="ds-comp-meta">
+                    <span class="ds-comp-name">Minimal Dark Form Controls</span>
+                    <span class="ds-comp-selector">input, .contact__radio-btn</span>
+                  </div>
+                  <div class="ds-comp-preview" style="display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem;">
+                    <div style="display: flex; gap: 1rem; width: 100%; max-width: 480px;">
+                      <input type="text" placeholder="YOUR NAME" style="flex: 1; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.25); color: #fff; font-family: var(--ds-font-mono); font-size: 0.85rem; padding: 0.5rem 0; outline: none;" />
+                    </div>
+                    <div style="display: flex; gap: 1rem; width: 100%; max-width: 480px;">
+                      <input type="email" placeholder="YOUR EMAIL ADDRESS" style="flex: 1; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.25); color: #fff; font-family: var(--ds-font-mono); font-size: 0.85rem; padding: 0.5rem 0; outline: none;" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Tab and Hash management
+    var tabOverview = document.getElementById('tab-overview');
+    var tabComponents = document.getElementById('tab-components');
+    var viewOverview = document.getElementById('view-overview');
+    var viewComponents = document.getElementById('view-components');
+
+    function syncHash() {
+      var hash = window.location.hash || '#overview';
+      if (hash === '#components' || hash.startsWith('#comp-') || hash.startsWith('#foundations-')) {
+        tabOverview.classList.remove('is-active');
+        tabComponents.classList.add('is-active');
+        viewOverview.style.display = 'none';
+        viewComponents.style.display = 'block';
+
+        if (hash.startsWith('#comp-') || hash.startsWith('#foundations-')) {
+          var targetEl = document.querySelector(hash);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      } else {
+        tabComponents.classList.remove('is-active');
+        tabOverview.classList.add('is-active');
+        viewComponents.style.display = 'none';
+        viewOverview.style.display = 'block';
+      }
+    }
+
+    tabOverview.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.hash = '#overview';
+      syncHash();
+    });
+
+    tabComponents.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.hash = '#components';
+      syncHash();
+    });
+
+    // Update active state in sidebar on click
+    document.querySelectorAll('.ds-nav-item').forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        document.querySelectorAll('.ds-nav-item').forEach(function(el) { el.classList.remove('is-active'); });
+        item.classList.add('is-active');
+      });
+    });
+
+    window.addEventListener('hashchange', syncHash);
+    syncHash();
+  </script>
+</body>
+</html>
