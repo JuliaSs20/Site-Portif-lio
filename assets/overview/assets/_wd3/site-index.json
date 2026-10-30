@@ -1,0 +1,1214 @@
+{
+ "version": 1,
+ "tool": "wd3 0.1.0",
+ "captureId": "tsitsipas.com-4ce8c359",
+ "capturedAt": "2026-10-30T22:59:14+00:00",
+ "entry": {
+  "url": "https://tsitsipas.com/",
+  "path": "/",
+  "search": "",
+  "file": "assets/tsitsipas.com/index.html",
+  "contentType": "text/html; charset=utf-8"
+ },
+ "blocked": [
+  "^https?://([^/?#]+\\.)?(google\\-analytics\\.com|analytics\\.google\\.com|googletagmanager\\.com|googleadservices\\.com|doubleclick\\.net|googlesyndication\\.com|googleoptimize\\.com|connect\\.facebook\\.net|bat\\.bing\\.com|snap\\.licdn\\.com|px\\.ads\\.linkedin\\.com|analytics\\.tiktok\\.com|ct\\.pinterest\\.com|static\\.ads\\-twitter\\.com|analytics\\.twitter\\.com|tr\\.snapchat\\.com|sc\\-static\\.net|mc\\.yandex\\.ru|hotjar\\.com|hotjar\\.io|clarity\\.ms|cdn\\.segment\\.com|api\\.segment\\.io|cdn\\.mxpnl\\.com|api\\-js\\.mixpanel\\.com|api\\.mixpanel\\.com|api\\.amplitude\\.com|api2\\.amplitude\\.com|api\\-secure\\.amplitude\\.com|api\\-sr\\.amplitude\\.com|sr\\-client\\-cfg\\.amplitude\\.com|plausible\\.io|cloud\\.umami\\.is|analytics\\.umami\\.is|static\\.cloudflareinsights\\.com|cloudflareinsights\\.com|vitals\\.vercel\\-insights\\.com|browser\\-intake\\-datadoghq\\.com|browser\\-intake\\-datadoghq\\.eu|js\\-agent\\.newrelic\\.com|bam\\.nr\\-data\\.net|bam\\-cell\\.nr\\-data\\.net|fullstory\\.com|script\\.crazyegg\\.com|mouseflow\\.com|smartlook\\.com|heapanalytics\\.com|i\\.posthog\\.com|stats\\.wp\\.com|pixel\\.wp\\.com|promotekit\\.com|ingest\\.sentry\\.io|ingest\\.us\\.sentry\\.io|ingest\\.de\\.sentry\\.io|widget\\.intercom\\.io|js\\.intercomcdn\\.com|api\\-iam\\.intercom\\.io|js\\.hs\\-scripts\\.com|js\\.hs\\-analytics\\.net|js\\.hs\\-banner\\.com|js\\.hscollectedforms\\.net|js\\.usemessages\\.com|track\\.hubspot\\.com|client\\.crisp\\.chat|embed\\.tawk\\.to|js\\.driftt\\.com|static\\.zdassets\\.com|ekr\\.zdassets\\.com|cdn\\.cookielaw\\.org|geolocation\\.onetrust\\.com|consent\\.cookiebot\\.com|consentcdn\\.cookiebot\\.com|app\\.usercentrics\\.eu|api\\.usercentrics\\.eu|cdn\\.iubenda\\.com|cmp\\.osano\\.com|cdn\\.termly\\.io)(:\\d+)?([/?#]|$)",
+  "/rpc/increment_shared_code_views",
+  "^https?://(umami|analytics|stats|plausible)\\.[^/]+/(api/send|api/collect|api/event|script\\.js)",
+  "/g/c(ollect)?\\?v=2&",
+  "sentry\\.io/api/\\d+/(envelope|store)",
+  "/api/meta-capi",
+  "^https?://(leadtracker|tracking|track|events?|collect)\\.[^/]+/",
+  "^https?://a\\.vturb\\.com/",
+  "facebook\\.com/tr[/?]",
+  "/_vercel/(speed-)?insights/",
+  "/cdn-cgi/rum",
+  "/cdn-cgi/challenge-platform/",
+  "google\\.com/(pagead|ads)/"
+ ],
+ "volatileParams": [
+  "v",
+  "_rsc",
+  "dpl",
+  "_",
+  "t",
+  "ts",
+  "timestamp",
+  "cb",
+  "cachebust",
+  "cacheBust",
+  "nocache",
+  "rnd",
+  "rand",
+  "random",
+  "_t"
+ ],
+ "entries": [
+  {
+   "url": "https://tsitsipas.com/",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/html; charset=utf-8",
+   "headers": {
+    "content-type": "text/html; charset=utf-8",
+    "link": "<https://cdn.prod.website-files.com>; rel=preconnect; crossorigin, <https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/css/stefanos-tsitsipas.shared.915902606.min.css>; rel=preload; as=style; crossorigin; integrity=\"sha384-kVkCYGhmvcNyassyHUORdVszourv+mZuOQUTLWVluDaLmS71XAWG+mT+ZYaMbnwk\"",
+    "surrogate-control": "max-age=3645",
+    "surrogate-key": "tsitsipas.com 697cbd4d306021d0cc247ad9 pageId:697cbd4d306021d0cc247ad3 6987d36e3bce8486a71b7be9 69811f04ef5cfc2fbf6bfa60 69811ecd5f892a6a50abb26b sp:6e2ff5a6155efb4b8ed118a9ed164e62",
+    "x-lambda-id": "b6879656-2aff-4c3b-98f6-f15f02fc8751",
+    "x-wf-region": "us-east-1"
+   },
+   "resourceType": "document",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/tsitsipas.com/index.html",
+   "size": 67623,
+   "modes": [
+    "navigate"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/css/stefanos-tsitsipas.shared.915902606.min.css",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/css",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "text/css",
+    "priority": "u=0,i=?0",
+    "x-amz-id-2": "hR2JoL2a/rC2KaaB5LvCc40C7D/KMl1g8CVCeeNXTHi4ou3kol992Xnv8xLFubRbbp7vCxgjjXE=",
+    "x-amz-request-id": "C12PE5DR60FM9G5K",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "WPF9fIM0RYiHNNxQBDiw2JoLvSaEEJN1"
+   },
+   "resourceType": "stylesheet",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/css/stefanos-tsitsipas.shared.915902606.min.css",
+   "size": 104358,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/js/stefanos-tsitsipas.a0aa6ca1.1176730d49a681da.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/javascript",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "text/javascript",
+    "priority": "u=1,i=?0",
+    "x-amz-id-2": "R+Y7SBhs3vHl3mS6+zJOO2wX2+O61eQvuVCwkpuMZEm+7D8oQNTMwBZUYeki4QEUKcHaq56x03RKHmzhNUo2DM1b7bnPbaEb",
+    "x-amz-request-id": "E2EX2YNS27DSVBQ4",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "isfMe9CocftLhlS7CXRHme2pURHEgrK8"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/js/stefanos-tsitsipas.a0aa6ca1.1176730d49a681da.js",
+   "size": 1068,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/js/stefanos-tsitsipas.schunk.7c514c4b18297836.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/javascript",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "text/javascript",
+    "priority": "u=1,i=?0",
+    "x-amz-id-2": "Dw5Q3SUh4BpWa0wBHbOX/+vHJzd7dJHbRTpKBoAwtFhxqvhn5jmNE7uQl9n+T8LzwCPmwrGsfHg=",
+    "x-amz-request-id": "8STM58C1DT5NWS6C",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "wa2SgEDKw1uqsdCuONaXGm74xRVch_a2"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/js/stefanos-tsitsipas.schunk.7c514c4b18297836.js",
+   "size": 45432,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=697cbd4d306021d0cc247ad9",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/javascript",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "application/javascript"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8__q211c97ff.js",
+   "size": 89476,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6984659a86d1a91c371e3fd9_footer-pattern.svg",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/svg+xml",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/svg+xml",
+    "priority": "u=3,i",
+    "x-amz-id-2": "mGJhJRh4RGs1hiSnj6LBfo41rIck+RuGTfw/Xm1f+MX2MQr/QN3laDdPhIgSzed4oKBcB64XznCBz5a7HE6zO+KBgR7C+u2F",
+    "x-amz-request-id": "6C3JF496KN8WCS1Z",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "BtuHvGXvdqWapCGgjwTrGFMhnp7hE.a."
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6984659a86d1a91c371e3fd9_footer-pattern.svg",
+   "size": 547,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/698388c5af343968593c1e96_pattern-bg.svg",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/svg+xml",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/svg+xml",
+    "priority": "u=1,i",
+    "x-amz-id-2": "rvmKdrbPbUUjGL1ayxBhNQr7esKV1KO8gYskxS5XP0C2ofzLPAiN9AGlt9o7fEuLfYtLtIIxXRX2GLya6ZcDLk5HHGQc/xYS",
+    "x-amz-request-id": "4F0N4167M8X6K19S",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "9DLoTmcW9iHP59YaxkthuPIL3XwQwbtb"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/698388c5af343968593c1e96_pattern-bg.svg",
+   "size": 451,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6981e1980f8bcf10463452c4_ABCDiatypeMono-Medium.woff2",
+   "method": "GET",
+   "status": 200,
+   "contentType": "font/woff2",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "font/woff2",
+    "priority": "u=0,i=?0",
+    "x-amz-id-2": "E/bLYdsXFX1gdJ3rMoQKsf6fkOxC6l5DEWfKpt2II6fTNeSqKVqT25AMXeWym7KCnf0GWH3X5FGqU8/aZNXsuY594bVb29MK",
+    "x-amz-request-id": "0YAV73Z0S5BQAC81",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "dwGFaevD7D4c8xvfwGp9KfmNMEwoBBoQ"
+   },
+   "resourceType": "font",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6981e1980f8bcf10463452c4_ABCDiatypeMono-Medium.woff2",
+   "size": 23716,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6981e1764ed0c80cb322292b_ABCDiatype-Bold.woff2",
+   "method": "GET",
+   "status": 200,
+   "contentType": "font/woff2",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "font/woff2",
+    "priority": "u=0,i=?0",
+    "x-amz-id-2": "xgtoekcG7DwYQ0HABj6qspmu+eZGh9r/cWpXIrhpoUISeE2Lr00typBuYb4P1JHSwNjh3eEe6X8=",
+    "x-amz-request-id": "JFE4A65P14G7W502",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "UvX.c5VydVxL2fJVYuy5m.8q2tijEfi8"
+   },
+   "resourceType": "font",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6981e1764ed0c80cb322292b_ABCDiatype-Bold.woff2",
+   "size": 56620,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6981e176133f751073e93c39_ABCDiatype-Medium.woff2",
+   "method": "GET",
+   "status": 200,
+   "contentType": "font/woff2",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "font/woff2",
+    "priority": "u=0,i=?0",
+    "x-amz-id-2": "0GJUWnRHVzYn8Kh2q2ganx97BnEPValYKf+iah/vAJPxR5/K8SNjqELlUTQ03bvT1hUcqelHXKo=",
+    "x-amz-request-id": "CT0WFTXFTVSVYPK8",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "oYTj9iuQPRpXsQzx9oJExIc3y8yecbFE"
+   },
+   "resourceType": "font",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6981e176133f751073e93c39_ABCDiatype-Medium.woff2",
+   "size": 57404,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://stefanos-nu.vercel.app/app.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/javascript; charset=utf-8",
+   "headers": {
+    "access-control-allow-headers": "Content-Type",
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-disposition": "inline; filename=\"app.js\"",
+    "content-type": "application/javascript; charset=utf-8"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos-nu.vercel.app/app.js",
+   "size": 1830400,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/698f5ea56ffd7f9cbc70d63d_Stefanos_signature_white.json",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/json",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "application/json",
+    "priority": "u=1,i",
+    "x-amz-id-2": "SdOjHMKTbH9nqPn7ZCvT/RR4VS4Is6ovUlWzcGZU9ToUunTRfoIa0GEYsTz+72NHuHdBqMZg+bYPRvx5rfOMox0u8W9Pxgfj",
+    "x-amz-request-id": "Y9ZBN0ESSJ2KDJFQ",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "WcEJr57H6OCkfSSN2RgyumE.vveg6MBD"
+   },
+   "resourceType": "xhr",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/698f5ea56ffd7f9cbc70d63d_Stefanos_signature_white.json",
+   "size": 27171,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/698f58e1817f2c6a6a8b49b5_Stefanos_signature.json",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/json",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "application/json",
+    "priority": "u=1,i",
+    "x-amz-id-2": "J7RqdfgkSjGCrdIBUIfLvbxkTWkxbxItPVVAiWUAWz5S0x/WTMIqLVmhy1cTwHMvy001TMuuMAg=",
+    "x-amz-request-id": "4JJ1ZM5YV9NGAQVA",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "WcVkxN_lo8EeKKU2k6lMBAjMVoEwIvau"
+   },
+   "resourceType": "xhr",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/698f58e1817f2c6a6a8b49b5_Stefanos_signature.json",
+   "size": 27522,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9c9f0dba68401fa40ba1_FavIcon.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/png",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/png",
+    "priority": "u=1,i",
+    "x-amz-id-2": "cq4zwvMCeeDvzKxrS13ulc/l5vs6Dg8kXDKim6q1NE84cPLxR8HkiITZ6JfDta9VdDpfbTdPVBsLLRR/MNBTHQJpc32+ZB+F",
+    "x-amz-request-id": "1MBDSPD50HWWZM0F",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "XMvCeYaC_4GJ8BhDguD3DA91a3HgHWB6"
+   },
+   "resourceType": "other",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9c9f0dba68401fa40ba1_FavIcon.png",
+   "size": 1892,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/models/stefanos-on-court-camera-04.glb",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/octet-stream",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "application/octet-stream"
+   },
+   "resourceType": "fetch",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/models/stefanos-on-court-camera-04.glb",
+   "size": 3004,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/hdri/monochrome_studio_02_05k.hdr",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/octet-stream",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "application/octet-stream"
+   },
+   "resourceType": "fetch",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/hdri/monochrome_studio_02_05k.hdr",
+   "size": 395245,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/models/stefanos-statue-05.glb",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/octet-stream",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "application/octet-stream"
+   },
+   "resourceType": "fetch",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/models/stefanos-statue-05.glb",
+   "size": 2525340,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/models/stefanos-racket-12.glb",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/octet-stream",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "application/octet-stream"
+   },
+   "resourceType": "fetch",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/models/stefanos-racket-12.glb",
+   "size": 696492,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/models/stefanos-painting-06.glb",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/octet-stream",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "application/octet-stream"
+   },
+   "resourceType": "fetch",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/models/stefanos-painting-06.glb",
+   "size": 2005880,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/models/stefanos-on-court-22.glb",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/octet-stream",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "application/octet-stream"
+   },
+   "resourceType": "fetch",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/models/stefanos-on-court-22.glb",
+   "size": 5513956,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/textures/signature-01.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/png",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "image/png"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/textures/signature-01.png",
+   "size": 5844,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/textures/bake-voronoi.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "image/webp"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/textures/bake-voronoi.webp",
+   "size": 779496,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/textures/court.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "image/webp"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/textures/court.webp",
+   "size": 2752,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/textures/noise.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "image/webp"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/textures/noise.webp",
+   "size": 84350,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/basis/basis_transcoder.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/javascript",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "text/javascript"
+   },
+   "resourceType": "fetch",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/basis/basis_transcoder.js",
+   "size": 57529,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/basis/basis_transcoder.wasm",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/wasm",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "application/wasm"
+   },
+   "resourceType": "fetch",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/basis/basis_transcoder.wasm",
+   "size": 527333,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6992ef7dbe052922812c22c8_caroussel-1.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "image/webp",
+    "priority": "u=3,i",
+    "x-amz-id-2": "blUSEUG6gtSyWzzf3CGf8xsFLW8oAgxuvfjTawqNpInHFAQiru4xeBG/fteTHMMkMNhGBBDD1fU3yhE/GI8HQtwkc2vdM9XC711bec+bnuk=",
+    "x-amz-request-id": "KX3W7W6GMTX8G56M",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "zwUaLl5PtesPyI_8jrWH4VnC0gzWbEis"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6992ef7dbe052922812c22c8_caroussel-1.webp",
+   "size": 26930,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6992ef7dcbda3186b014e897_9cc1bcd4d76561271c3d4cb50f348dd9_caroussel-2.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "image/webp",
+    "priority": "u=3,i",
+    "x-amz-id-2": "W1qj8BCzr8I0jHyx6M7B+evQxCUAYxNXnYA9FGo2swG36/lCOJ6jzaLYZedPvuOiEVPqPU5T1HfoWjjj1rGzwJqG8wkQEZRj",
+    "x-amz-request-id": "79DNT9DH3359ACAK",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-storage-class": "INTELLIGENT_TIERING",
+    "x-amz-version-id": "ZBtakMDk9MSroZ702vDAHd9IDPl4zZa1"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6992ef7dcbda3186b014e897_9cc1bcd4d76561271c3d4cb50f348dd9_caroussel-2.webp",
+   "size": 219534,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6992ef7d22ba817bd4e6e4e5_caroussel-4.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "image/webp",
+    "priority": "u=3,i",
+    "x-amz-id-2": "4Gouza21nvWEkcYtvFKBc8l0bllA8lPs0JjRyGzQiX0Uq0U/YDYYIjklGBHs00NYaF3gjfStPxZ4Xa1IcOOIK8vykpHqhHlL",
+    "x-amz-request-id": "Z7QX2M10YDWPCQZN",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "TXgIPRJw4ZKy46D5irDa.pZRQT27cfFr"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6992ef7d22ba817bd4e6e4e5_caroussel-4.webp",
+   "size": 37692,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6992ef7d8da0d6f42f501566_caroussel-3.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "image/webp",
+    "priority": "u=3,i",
+    "x-amz-id-2": "0UtCBKYWBE90686bLsBVlO0ltb8eSJff8HC86qs1FfiNKp8Rpo8tWhbuiCJKG0J2jchnF4xtGxQTbccDeBYCLtsDGU2ebM4w",
+    "x-amz-request-id": "B8SY1PN0RXCN54NC",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "82Tj.adNJb9f.EQVnNmoC57Rv0wfQ967"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6992ef7d8da0d6f42f501566_caroussel-3.webp",
+   "size": 29866,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a3534ba063ef4542d8008ee_6992ef7ddbc8dc42a02affdb_caroussel-5.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, HEAD",
+    "access-control-allow-origin": "*",
+    "access-control-max-age": "3000",
+    "content-type": "image/webp",
+    "priority": "u=3,i",
+    "x-amz-id-2": "8144X13ixUXJyLcwbuMy0dI4JhLmSGvWjoNZI+ZEu/lw+EkYtaOIQjQFJ18o4qkDYjFCXp9W5d8=",
+    "x-amz-request-id": "4902X7CG0HH3AQN7",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "fkbNBtHKtorW9flXA_qC63447AjrvdZt"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a3534ba063ef4542d8008ee_6992ef7ddbc8dc42a02affdb_caroussel-5.webp",
+   "size": 22542,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/69cfe34e50d8fbd303c6c951_apostolos-tsitsipas-habla-por-primera-vez-tras-la-separacion-con-su-hijo-stefanos.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "priority": "u=3,i",
+    "x-amz-id-2": "JynQ2E0W6OBI5C8AzZsAYevFIxFfSDyYVK9uz5v8oZrFvcn9oGKNPulpAcC0mCMe5MasGtfeXys=",
+    "x-amz-request-id": "FTRR0WGHCB105Y4B",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "oDFQn.6Y.Uqt1nQZcN58o0sEdTT.EtIO"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/69cfe34e50d8fbd303c6c951_apostolos-tsitsipas-habla-por-primera-vez-tras-la-separ_14cde750.webp",
+   "size": 44184,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698a371a373e9543ef73e4d5_legacy-pavlos.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "priority": "u=3,i",
+    "x-amz-id-2": "ckWib6yZC7S7ZLtT5O0B6/RViCzVosbLbXicXt3g6U1uWnsyfDpn4ACV8xgmOU8z/a75bo+tw0xz9wQngyh+4VXVFVg4xGYP",
+    "x-amz-request-id": "Z1VAFPP2X1Q8J6AN",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "bU4dhQnxusoPY2sTkaoGS1o0UFK9QEte"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698a371a373e9543ef73e4d5_legacy-pavlos.webp",
+   "size": 44206,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b40e0f8c8b9bb51cee579_rolex-thumbnail.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "priority": "u=1,i",
+    "x-amz-id-2": "8FjFHUGLbU5PBGP3+1PJ50XQ3hnftX9RzELblVLexYtsfW4urPpMIfwdWd32/IJM7A9JXC1IOoLSyZDi9sqJoT23fmy4B2ps",
+    "x-amz-request-id": "3G056DKH0JMF7YGX",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "nmzEoZF2.PXxaRyqMAJ88lXoX1ILI.mI"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b40e0f8c8b9bb51cee579_rolex-thumbnail.webp",
+   "size": 40146,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698c83536b798c6c1bc4e0e2_wilson-thumb.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "priority": "u=1,i",
+    "x-amz-id-2": "Qu140ecbslxizC9DWQF2KwBa39hnoinmMjZFQVQhVG/Ouhmkg7+Pm7IErlXlzASHpL/HBmIzjpN6OYNe9CY16lS4wxaE3uKL",
+    "x-amz-request-id": "PZNRS2CJKHDYWSJA",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "Wef3ACIeXqCgSw1mKz5VtgTuXmet1QO5"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698c83536b798c6c1bc4e0e2_wilson-thumb.webp",
+   "size": 90376,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b48d9d44a8165d203dab8_adidas_Logo-white.svg",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/svg+xml",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/svg+xml",
+    "priority": "u=1,i",
+    "x-amz-id-2": "Oo7p4Ub2PH0ybmE3JTjQUm05Wihg4mc00g+vsiZ0XltAhkPjWApL82+8ubMu5mvpWwUTzA+nC1vU6Xk+sDzLg8ge9f6a+iB8",
+    "x-amz-request-id": "WG9BBWXF7ARX6BKD",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "KcSbXEq4Iz21hprN5GEvaiw6rRXvnkiO"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b48d9d44a8165d203dab8_adidas_Logo-white.svg",
+   "size": 3250,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b4904cc670bec1e560a09_rolex_201x_logo-blue.svg",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/svg+xml",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/svg+xml",
+    "priority": "u=1,i",
+    "x-amz-id-2": "R7V+1MK9obSOJRqOIVgX8kHTUdN5j/MABILvNY9J5yTDfuo29SIXTBdAQwPJIdAt+E6xLCSBBVhnEC5FjOMlmooiDp9e+5W3",
+    "x-amz-request-id": "GBZS9Q5NKGDBVC8R",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "SW14raW_npY7Phaf3yp3bsgVvHqaWJMk"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b4904cc670bec1e560a09_rolex_201x_logo-blue.svg",
+   "size": 5271,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b48d4d44a8165d203d443_adidas_Logo-blue.svg",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/svg+xml",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/svg+xml",
+    "priority": "u=1,i",
+    "x-amz-id-2": "RfSTu8tQHKnZKaCgL97HNWIVowJMKu8PJFzse/GENpfeeI+XcWujOSarPTNZ9CL4Qlu1h5RulVM=",
+    "x-amz-request-id": "WG9AE3YVBJ2AZW1C",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "kyw3C9US.ZZR3EtbbNEKNKtsrlyMp_In"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b48d4d44a8165d203d443_adidas_Logo-blue.svg",
+   "size": 3250,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b4908d4aa9f49042f7e2c_rolex_201x_logo-white.svg",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/svg+xml",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/svg+xml",
+    "priority": "u=1,i",
+    "x-amz-id-2": "BfuCOy+yWbRn81b6ano2wJmS9XNgOWF8psNaRzTIK2RbRa9gcSs1O7UDRoJUeI114koFC3VvPa4=",
+    "x-amz-request-id": "9JEJ5MTN1RTD0HT9",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "0E9GZGPUP1_9aOc3FG6mHFA.N9Gm_VAg"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b4908d4aa9f49042f7e2c_rolex_201x_logo-white.svg",
+   "size": 5271,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b3dd8d1b05f8e5a1f7cc4_canali-logo-blue.svg",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/svg+xml",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/svg+xml",
+    "priority": "u=1,i",
+    "x-amz-id-2": "G31/aB+VJsGqu4SL+jvrmpQ2ungTOhPlsRo4Et0WMlTizZVNDq905aICWlgJlw2/eq2w7LqC7Tg=",
+    "x-amz-request-id": "ASQQ0ZADQBV3X1D0",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "1PIUEyza1nTfhfFch7iQOu1PeZsnfUua"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b3dd8d1b05f8e5a1f7cc4_canali-logo-blue.svg",
+   "size": 4205,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b3ddca214bb812634e49a_canali-logo-white.svg",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/svg+xml",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/svg+xml",
+    "priority": "u=1,i",
+    "x-amz-id-2": "pOi3VltO4WmGtWlgYuRmfM15/bkD7b7oElnC3mRZlXn1zTkfA6sK6u3b1vBPOtv+bTQ5jEmIbwM=",
+    "x-amz-request-id": "01XDG61SPA1Q2NVX",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "IVPjDP8msHT9E3QFMBSchCuOcbt_HX2Z"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b3ddca214bb812634e49a_canali-logo-white.svg",
+   "size": 4205,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b48edb65fddf0866c3a3e_wilson-logo-blue.svg",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/svg+xml",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/svg+xml",
+    "priority": "u=1,i",
+    "x-amz-id-2": "BcqpDZrw34PrDr1IyraT8LASg6mfuHjVmceaAGnIfYWM3fisss72XNatvI3w89C4NhbX9fbNPo4=",
+    "x-amz-request-id": "HGGQ57Q2K4ACKPCK",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "xNzetBRcKBSmBJltCGB2PACzTOX6ry22"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b48edb65fddf0866c3a3e_wilson-logo-blue.svg",
+   "size": 6672,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698a36d10b2580b5a5204397_legacy-petros.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "priority": "u=3,i",
+    "x-amz-id-2": "sskVElBxqmN9IxLnwuPDeMG/6nk3PQmpLbRK/+FA7YhsJmK5qplDqp0wbxvSjYFUacgbuJfHEOSAKoaWV7wf5ErLtN2yMoyR",
+    "x-amz-request-id": "8WBSY6BHJPP41JP9",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "RZsi9ENtbJE5Tpj93Xc9j579uKH9ZU0Q"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698a36d10b2580b5a5204397_legacy-petros.webp",
+   "size": 27302,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b48f1a1966bf3f0c483de_wilson-logo-white.svg",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/svg+xml",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/svg+xml",
+    "priority": "u=1,i",
+    "x-amz-id-2": "1ufdylnS6Gi1PLecAY6vi7mdA4UXl34vR5wfdwNDvC4lpETVgruGfBvY/CuV+z/5PI/ThKgg8Jo=",
+    "x-amz-request-id": "D9MD8M2W5V4E65N0",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "1jKfzszKqEmVjlBAuj.0rdnftcUrMzOq"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b48f1a1966bf3f0c483de_wilson-logo-white.svg",
+   "size": 6672,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b40d0be76069085e0869e_adidas-thumbnail.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "priority": "u=1,i",
+    "x-amz-id-2": "4hft5Mj8ucvyFTyopFhtkHPYq+O9Ko2vr1jEcsIKvNg1KpND6w1QN45PglIwJEE7/73OGrat8Xv9UaIBbHDhHDZNKOJeBCco",
+    "x-amz-request-id": "PZNSDPDCSAEF0W3B",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "cZUDcIXqv4G_P6HaqifKU3j9eJGOrZkc"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b40d0be76069085e0869e_adidas-thumbnail.webp",
+   "size": 27560,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b3f6a3bb6762b8c8a139f_canali-thumb.webp",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "priority": "u=1,i",
+    "x-amz-id-2": "KNbbNv4j0+w7I1d+SXJgUWPibUoLVKnOsvACpcXx+g9XiJc/RICooc5RrPpxOUuHC2ft2zvzBLk=",
+    "x-amz-request-id": "9JERVQQVF2MZK9YZ",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "34rKvB51Py_RmJdLfRhbb3KGBsKch.IQ"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/69811ecd0d9b99ec2ae307b7/698b3f6a3bb6762b8c8a139f_canali-thumb.webp",
+   "size": 102432,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9ca0bc7d3e95bf32a93b_FavIcon.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/png",
+   "headers": {
+    "content-type": "image/png",
+    "x-amz-request-id": "R221GF5SZW90ZJPX",
+    "x-amz-id-2": "c9WCQNicxkYT2fmTq29HwF7OyfLC0EC6mXcEUFWA6V3FuFt4Ri9Gvt3Odo8AA8cQ64PkB8fkVxSxU3Hf7l14HzLVCoC42P1W",
+    "x-amz-version-id": "odcTgJYeSwCY9lUXtNKSqTBj9e68BU53",
+    "x-amz-server-side-encryption": "AES256",
+    "access-control-allow-origin": "*"
+   },
+   "resourceType": "other",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9ca0bc7d3e95bf32a93b_FavIcon.png",
+   "size": 31710
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9ca0c61f2141091bfbd8_FavIcon.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/png",
+   "headers": {
+    "content-type": "image/png",
+    "x-amz-id-2": "MDCAjM9CkJGL39HAa9cqEOMeg3IPgY9aF337AoG6uJpuO+NdOrqD33xGXKKkjZJ/N1h5+AA4zcpCYgqW3I4Dsf3s23h67tPg",
+    "x-amz-request-id": "HSTPPEVWM1YCV7PD",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "IZBJ5Cr_zFY_k7tQZXThAQjFg6VS4uyN",
+    "access-control-allow-origin": "*"
+   },
+   "resourceType": "other",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9ca0c61f2141091bfbd8_FavIcon.png",
+   "size": 3645
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9ce1e24085f5c8bcd4bf_FavIconWhite.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/png",
+   "headers": {
+    "content-type": "image/png",
+    "x-amz-id-2": "rljP0Y8o1GdkP/d4mKuCeTDmaIIT86cyxV32Sddl4YQSW1xh1VUdKJvp1NH/Rs4LFtmnMnpADg8=",
+    "x-amz-request-id": "E7JVDQVQXVSGSXBM",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "vEpWo960jajCvpy6p_xywqGHMOkqpAsX",
+    "access-control-allow-origin": "*"
+   },
+   "resourceType": "other",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9ce1e24085f5c8bcd4bf_FavIconWhite.png",
+   "size": 1539
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9ca09e7f88f27415b26b_FavIcon.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/png",
+   "headers": {
+    "content-type": "image/png",
+    "x-amz-id-2": "FkgLOvUVePe/m1tbGxot9pWuDDa5t8q4/1+gEJ+/iPVux1JotwkpS+1ByK9vPtHZomIVlgASh1Q=",
+    "x-amz-request-id": "A6YP9DQ4N3GE0XQC",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "mKcIsZXNkmYDbudhZyoZavWIbtZEPL6p",
+    "access-control-allow-origin": "*"
+   },
+   "resourceType": "other",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9ca09e7f88f27415b26b_FavIcon.png",
+   "size": 145014
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9ca022abec2ec025c8d0_FavIcon.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/png",
+   "headers": {
+    "content-type": "image/png",
+    "x-amz-id-2": "W2iTTxNKq8aMEEcKeLuz5UYYHRbB2wDiHcHCj7a1IlSXGuHaNEdwKJCOMhsK6152FBOg40BR8T0=",
+    "x-amz-request-id": "A0P3C683V75GT8R4",
+    "x-amz-server-side-encryption": "AES256",
+    "x-amz-version-id": "GYMW_IC1T5.CIDeGv2S7AakZzSRKjlo4",
+    "access-control-allow-origin": "*"
+   },
+   "resourceType": "other",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9ca022abec2ec025c8d0_FavIcon.png",
+   "size": 34636
+  }
+ ],
+ "videos": {
+  "posters": {},
+  "onlineHosts": []
+ }
+}
