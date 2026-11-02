@@ -1167,7 +1167,26 @@
       var copyright = Array.prototype.find.call(footer.querySelectorAll('p'), function (p) { return /©/.test(p.textContent); });
       if (copyright) copyright.textContent = '© 2026 Julia Santana. Todos os direitos reservados.';
     }
-    rewriteTree(doc);    var root = doc.documentElement;
+    var carouselImageNumbers = Array.prototype.map.call(doc.querySelectorAll('.home-content__img'), function (img) {
+      var match = (img.getAttribute('src') || '').match(/caroussel-([1-5])/);
+      return match && match[1];
+    });
+    rewriteTree(doc);
+    var carouselPhotos = {
+      '1': ['/assets/overview/assets/portfolio-photos/01-teatro-peca-escrita.jpg', 'Peça de teatro escrita por Julia'],
+      '2': ['/assets/overview/assets/portfolio-photos/02-volei-campeonato-1.jpg', 'Julia em campeonato de vôlei'],
+      '3': ['/assets/overview/assets/portfolio-photos/03-volei-campeonato-2.jpg', 'Julia em campeonato de vôlei'],
+      '4': ['/assets/overview/assets/portfolio-photos/04-volei-campeonato-3.jpg', 'Julia em campeonato de vôlei'],
+      '5': ['/assets/overview/assets/portfolio-photos/01-teatro-peca-escrita.jpg', 'Peça de teatro escrita por Julia']
+    };
+    doc.querySelectorAll('.home-content__img').forEach(function (img, index) {
+      var photo = carouselImageNumbers[index] && carouselPhotos[carouselImageNumbers[index]];
+      if (!photo) return;
+      SA.call(img, 'src', photo[0]);
+      img.removeAttribute('srcset');
+      SA.call(img, 'alt', photo[1]);
+    });
+    var root = doc.documentElement;
     var attrs = Array.prototype.map.call(root.attributes, function (a) {
       return ' ' + a.name + '="' + a.value.replace(/&/g, '&amp;').replace(/"/g, '&quot;') + '"';
     }).join('');
