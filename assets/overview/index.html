@@ -1084,8 +1084,11 @@
 
     var journey = doc.querySelector('.legacy__layout');
     if (journey) {
-      journey.querySelectorAll('.legacy__he [data-header-left-word]').forEach(function (node) { node.textContent = 'Minha'; });
-      journey.querySelectorAll('.legacy__he [data-header-right-word]').forEach(function (node) { node.textContent = 'trajetória'; });
+      var journeyTitle = journey.querySelector('.g__he-title-wrap');
+      if (journeyTitle) {
+        journeyTitle.querySelectorAll('[data-header-left-word]').forEach(function (node) { node.textContent = 'Minha'; });
+        journeyTitle.querySelectorAll('[data-header-right-word]').forEach(function (node) { node.textContent = 'trajetória'; });
+      }
       var intro = journey.querySelector('.legacy__content-inner .u-paragraph');
       if (intro) intro.textContent = 'As experiências que moldaram minha trajetória e influenciam quem sou além dos estudos e dos projetos.';
       var cards = journey.querySelectorAll('.legacy__cms-li');
