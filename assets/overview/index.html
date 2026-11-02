@@ -1093,8 +1093,8 @@
       if (intro) intro.textContent = 'As experiências que moldaram minha trajetória e influenciam quem sou além dos estudos e dos projetos.';
       var cards = journey.querySelectorAll('.legacy__cms-li');
       var entries = [
-        ['Pesquisa','& inovação','Tenho interesse em pesquisa e inovação e gosto de investigar como o conhecimento científico pode responder a desafios reais. A curiosidade me incentiva a fazer perguntas, buscar referências e transformar ideias em caminhos possíveis.','Em projetos como o Flowtificial, exercito a análise, a colaboração e a comunicação de conceitos. Quero continuar aprendendo e explorando soluções que aproximem tecnologia, ciência e necessidades humanas, com responsabilidade e atenção ao impacto de cada ideia.'],
-        ['Tecnologia','assistiva','A tecnologia me interessa especialmente quando pode ampliar a autonomia e facilitar o cotidiano. Procuro aprender sobre inteligência artificial para pensar em soluções acessíveis, úteis e centradas nas pessoas.','Gosto de entender uma necessidade concreta e imaginar como uma ideia pode se tornar algo prático. Esse interesse guia meus estudos e projetos, com vontade de colaborar, testar possibilidades e aprimorar cada resultado.'],
+        ['Amizade','e companheirismo','As amizades que construí ao longo da minha trajetória tornam os momentos especiais e me ensinam a apoiar e confiar nas pessoas ao meu redor. Em momentos compartilhados com amigas, encontro alegria, acolhimento e boas lembranças.','O companheirismo aparece na escuta, no cuidado e na parceria. Valorizo as conexões que construo e a forma como crescemos juntas, colaborando e celebrando as experiências do caminho.'],
+        ['Mundo','Felino','Minha relação com os gatos é cheia de carinho, companhia e pequenas descobertas. A convivência com eles me ensina a observar, cuidar e respeitar o tempo e a personalidade de cada um.','Cuidar dos meus gatos também envolve atenção à rotina e ao bem-estar deles. Este espaço celebra o afeto e as alegrias que fazem parte do meu mundo felino.'],
         ['Criatividade','& equipe','Escrever e participar de peças de teatro são formas de expressar ideias, observar diferentes perspectivas e desenvolver sensibilidade. Essas experiências também fortalecem minha comunicação e criatividade.','No vôlei, aprendi disciplina, resiliência e confiança no trabalho coletivo. Levo esse espírito para os estudos e projetos, contribuindo, ouvindo e construindo junto com outras pessoas.']
       ];
       cards.forEach(function (card, index) {
@@ -1177,6 +1177,19 @@
       return match && match[1];
     });
     rewriteTree(doc);
+    var journeyImages = [
+      ['/assets/overview/assets/portfolio-photos/trajetoria-amizade.png', 'Julia com amigas em uma festa de fantasia'],
+      ['/assets/overview/assets/portfolio-photos/trajetoria-mundo-felino.png', 'Dois gatos descansando juntos'],
+      ['/assets/overview/assets/portfolio-photos/trajetoria-criatividade-equipe.png', 'Time de vôlei da Julia']
+    ];
+    doc.querySelectorAll('.legacy__layout .legacy__cms-li').forEach(function (card, index) {
+      var photo = journeyImages[index];
+      var image = card.querySelector('.u-img-cover');
+      if (!photo || !image) return;
+      SA.call(image, 'src', photo[0]);
+      image.removeAttribute('srcset');
+      SA.call(image, 'alt', photo[1]);
+    });
     var carouselPhotos = {
       '1': ['/assets/overview/assets/portfolio-photos/01-teatro-peca-escrita.jpg', 'Peça de teatro escrita por Julia'],
       '2': ['/assets/overview/assets/portfolio-photos/02-volei-campeonato-1.jpg', 'Julia em campeonato de vôlei'],
