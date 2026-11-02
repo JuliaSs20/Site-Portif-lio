@@ -1127,16 +1127,30 @@
       }
       var cards = projectLayout.querySelectorAll('.sponsors-grid__cms-li');
       if (cards.length) {
-        var card = cards[0];
-        cards.forEach(function (item, index) { if (index > 0) item.remove(); });
-        var cover = card.querySelector('.u-img-cover');
-        var logos = card.querySelectorAll('.sponsors-grid__logo');
+        cards.forEach(function (item, index) { if (index > 2) item.remove(); });
         var coverSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 720"><rect width="980" height="720" fill="#163d73"/><path d="M0 540h980v180H0z" fill="#102c50"/><circle cx="490" cy="310" r="170" fill="none" stroke="#efff44" stroke-width="5"/><text x="490" y="300" text-anchor="middle" fill="#fffdf0" font-family="Arial,sans-serif" font-size="68" font-weight="700">FLOWTIFICIAL</text><text x="490" y="365" text-anchor="middle" fill="#efff44" font-family="Arial,sans-serif" font-size="26">Pesquisa em sangue artificial</text></svg>';
-        var logoWhite = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120"><text x="300" y="88" text-anchor="middle" fill="#fffdf0" font-family="Arial,sans-serif" font-size="78" font-weight="700">Flowtificial</text></svg>';
-        var logoBlue = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120"><text x="300" y="88" text-anchor="middle" fill="#163d73" font-family="Arial,sans-serif" font-size="78" font-weight="700">Flowtificial</text></svg>';
-        if (cover) { cover.setAttribute('src', 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(coverSvg)); cover.removeAttribute('srcset'); cover.setAttribute('alt', 'Flowtificial — pesquisa em sangue artificial'); }
-        if (logos[0]) { logos[0].setAttribute('src', 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(logoWhite)); logos[0].setAttribute('alt', 'Flowtificial'); }
-        if (logos[1]) { logos[1].setAttribute('src', 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(logoBlue)); logos[1].setAttribute('alt', 'Flowtificial'); }
+        function projectLogo(label, color) {
+          return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120"><text x="300" y="88" text-anchor="middle" fill="' + color + '" font-family="Arial,sans-serif" font-size="78" font-weight="700">' + label + '</text></svg>';
+        }
+        var projectCards = [
+          { label: 'Flowtificial', white: '#fffdf0', blue: '#163d73', cover: 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(coverSvg), alt: 'Flowtificial — pesquisa em sangue artificial' },
+          { label: 'Teatro', white: '#fffdf0', blue: '#163d73', alt: 'Peça de teatro escrita por Julia' },
+          { label: 'Vôlei', white: '#fffdf0', blue: '#163d73', alt: 'Equipe de vôlei de Julia' }
+        ];
+        cards.forEach(function (projectCard, index) {
+          var data = projectCards[index];
+          if (!data) return;
+          var logos = projectCard.querySelectorAll('.sponsors-grid__logo');
+          if (logos[0]) { logos[0].setAttribute('src', 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(projectLogo(data.label, data.white))); logos[0].setAttribute('alt', data.label); }
+          if (logos[1]) { logos[1].setAttribute('src', 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(projectLogo(data.label, data.blue))); logos[1].setAttribute('alt', data.label); }
+          if (index === 0) {
+            var cover = projectCard.querySelector('.u-img-cover');
+            if (cover) { cover.setAttribute('src', data.cover); cover.removeAttribute('srcset'); cover.setAttribute('alt', data.alt); }
+          }
+        });
+        var projectGridStyle = doc.createElement('style');
+        projectGridStyle.textContent = '@media screen and (min-width:768px){.sponsors-grid__layout .sponsors-grid__cms-li{grid-column:span 4}}';
+        doc.head.appendChild(projectGridStyle);
       }
     }
 
@@ -1180,6 +1194,19 @@
       return match && match[1];
     });
     rewriteTree(doc);
+    var projectPhotos = [
+      null,
+      ['/assets/overview/assets/portfolio-photos/01-teatro-peca-escrita.jpg', 'Peça de teatro escrita por Julia'],
+      ['/assets/overview/assets/portfolio-photos/trajetoria-criatividade-equipe.png', 'Equipe de vôlei de Julia']
+    ];
+    doc.querySelectorAll('.sponsors-grid__layout .sponsors-grid__cms-li').forEach(function (card, index) {
+      var photo = projectPhotos[index];
+      var image = card.querySelector('.u-img-cover');
+      if (!photo || !image) return;
+      SA.call(image, 'src', photo[0]);
+      image.removeAttribute('srcset');
+      SA.call(image, 'alt', photo[1]);
+    });
     var journeyImages = [
       ['/assets/overview/assets/portfolio-photos/trajetoria-amizade.png', 'Julia com amigas em uma festa de fantasia'],
       ['/assets/overview/assets/portfolio-photos/trajetoria-mundo-felino.png', 'Dois gatos descansando juntos'],
