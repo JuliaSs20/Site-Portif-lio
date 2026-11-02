@@ -1188,6 +1188,14 @@
       img.removeAttribute('srcset');
       SA.call(img, 'alt', photo[1]);
     });
+    doc.querySelectorAll('.g__signature').forEach(function (container) {
+      var signatureImage = doc.createElement('img');
+      SA.call(signatureImage, 'src', '/assets/overview/assets/portfolio-photos/assinatura-julia.svg');
+      SA.call(signatureImage, 'alt', 'Assinatura de Julia Santana');
+      SA.call(signatureImage, 'class', 'g__signature');
+      SA.call(signatureImage, 'style', 'display:block;object-fit:contain;');
+      if (container.parentNode) container.parentNode.replaceChild(signatureImage, container);
+    });
     var root = doc.documentElement;
     var attrs = Array.prototype.map.call(root.attributes, function (a) {
       return ' ' + a.name + '="' + a.value.replace(/&/g, '&amp;').replace(/"/g, '&quot;') + '"';
