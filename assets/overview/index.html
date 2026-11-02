@@ -1011,6 +1011,11 @@
     });
     importMap(doc);
     rewriteTree(doc);
+    doc.querySelectorAll('h1').forEach(function (heading) {
+      if (heading.textContent.trim().toUpperCase() === 'TSITSIPAS') {
+        heading.textContent = 'JULIA SANTANA';
+      }
+    });
     var root = doc.documentElement;
     var attrs = Array.prototype.map.call(root.attributes, function (a) {
       return ' ' + a.name + '="' + a.value.replace(/&/g, '&amp;').replace(/"/g, '&quot;') + '"';
