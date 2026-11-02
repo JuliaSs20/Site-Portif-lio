@@ -1110,6 +1110,12 @@
       if (section) section.id = 'habilidades';
     }
 
+    var loadingCat = doc.querySelector('[data-transition-svg]');
+    if (loadingCat) {
+      var catDrawing = '<svg width="100%" height="100%" viewBox="0 0 108 72" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="loading-cat-clip"><rect width="108" height="72"/></clipPath></defs><g opacity="0.25" stroke="#056BEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M29 64c-5-5-9-12-9-19 0-8 5-15 3-23-2-7-9-11-14-7-4 4 2 9 7 11 5 3 5 8 2 14-4 9 0 19 8 25l14-1c-2-4-6-5-11-5 9-2 19-4 25-11 4-5 6-11 7-17 7-3 12-9 15-16l2-9 7 7 7-9 1 14c7 2 11 7 11 13 0 7-5 11-11 12-3 5-3 11 0 16l4 5H84c-5-6-6-13-5-20-4-3-7-6-8-9-5 8-6 18-3 29h-9c-5-7-7-13-7-20"/></g><g data-transition-svg-inner clip-path="url(#loading-cat-clip)" stroke="#056BEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M29 64c-5-5-9-12-9-19 0-8 5-15 3-23-2-7-9-11-14-7-4 4 2 9 7 11 5 3 5 8 2 14-4 9 0 19 8 25l14-1c-2-4-6-5-11-5 9-2 19-4 25-11 4-5 6-11 7-17 7-3 12-9 15-16l2-9 7 7 7-9 1 14c7 2 11 7 11 13 0 7-5 11-11 12-3 5-3 11 0 16l4 5H84c-5-6-6-13-5-20-4-3-7-6-8-9-5 8-6 18-3 29h-9c-5-7-7-13-7-20"/></g></svg>';
+      loadingCat.innerHTML = catDrawing;
+    }
+
     var projectLayout = doc.querySelector('.sponsors-grid__layout');
     if (projectLayout) {
       var projectSection = projectLayout.closest('section');
