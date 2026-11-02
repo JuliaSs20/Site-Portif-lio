@@ -1087,18 +1087,18 @@
       journey.querySelectorAll('.legacy__he [data-header-left-word]').forEach(function (node) { node.textContent = 'Minha'; });
       journey.querySelectorAll('.legacy__he [data-header-right-word]').forEach(function (node) { node.textContent = 'trajetória'; });
       var intro = journey.querySelector('.legacy__content-inner .u-paragraph');
-      if (intro) intro.textContent = 'Áreas que me interessam e habilidades que venho desenvolvendo.';
+      if (intro) intro.textContent = 'As experiências que moldaram minha trajetória e influenciam quem sou além dos estudos e dos projetos.';
       var cards = journey.querySelectorAll('.legacy__cms-li');
       var entries = [
-        ['Pesquisa','& inovação','Interesse por pesquisa e inovação para transformar ideias científicas em soluções práticas.'],
-        ['Tecnologia','assistiva','Desenvolvimento de tecnologia assistiva com foco em soluções úteis para as pessoas.'],
-        ['Criatividade','& equipe','Teatro, escrita e vôlei fortalecem minha expressão, colaboração e disciplina.']
+        ['Pesquisa','& inovação','Tenho interesse em pesquisa e inovação e gosto de investigar como o conhecimento científico pode responder a desafios reais. A curiosidade me incentiva a fazer perguntas, buscar referências e transformar ideias em caminhos possíveis.','Em projetos como o Flowtificial, exercito a análise, a colaboração e a comunicação de conceitos. Quero continuar aprendendo e explorando soluções que aproximem tecnologia, ciência e necessidades humanas, com responsabilidade e atenção ao impacto de cada ideia.'],
+        ['Tecnologia','assistiva','A tecnologia me interessa especialmente quando pode ampliar a autonomia e facilitar o cotidiano. Procuro aprender sobre inteligência artificial para pensar em soluções acessíveis, úteis e centradas nas pessoas.','Gosto de entender uma necessidade concreta e imaginar como uma ideia pode se tornar algo prático. Esse interesse guia meus estudos e projetos, com vontade de colaborar, testar possibilidades e aprimorar cada resultado.'],
+        ['Criatividade','& equipe','Escrever e participar de peças de teatro são formas de expressar ideias, observar diferentes perspectivas e desenvolver sensibilidade. Essas experiências também fortalecem minha comunicação e criatividade.','No vôlei, aprendi disciplina, resiliência e confiança no trabalho coletivo. Levo esse espírito para os estudos e projetos, contribuindo, ouvindo e construindo junto com outras pessoas.']
       ];
       cards.forEach(function (card, index) {
         var entry = entries[index];
         if (!entry) return;
         card.querySelectorAll('.legacy__li-title .u-h3').forEach(function (node, n) { node.textContent = entry[n % 2]; });
-        card.querySelectorAll('.legacy__li-content .u-paragraph').forEach(function (node) { node.textContent = entry[2]; });
+        card.querySelectorAll('.legacy__li-content .u-paragraph').forEach(function (node, n) { node.textContent = entry[n + 2] || ''; });
       });
       var section = journey.closest('section');
       if (section) section.id = 'habilidades';
