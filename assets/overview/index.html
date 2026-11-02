@@ -1079,6 +1079,8 @@
       var link = about.querySelector('.home-content__item a');
       if (link) { link.setAttribute('href', '#habilidades'); var text = link.querySelector('.btn-text'); if (text) text.textContent = 'Conheça minha trajetória'; }
     }
+    var personalIntro = doc.querySelector('.home-content__layout.is-last .home-content__item .u-paragraph');
+    if (personalIntro) personalIntro.innerHTML = 'Sou estudante técnica de Inteligência Artificial e gosto de explorar como a tecnologia pode transformar ideias em soluções úteis. Minha curiosidade me leva a pesquisar, aprender e experimentar.<br/><br/>Também escrevo e participo de peças de teatro, além de jogar vôlei. Essas experiências fortaleceram minha criatividade, comunicação, disciplina e trabalho em equipe — qualidades que levo para cada projeto.';
 
     var journey = doc.querySelector('.legacy__layout');
     if (journey) {
