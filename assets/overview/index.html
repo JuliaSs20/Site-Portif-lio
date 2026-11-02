@@ -1010,18 +1010,14 @@
       if (/content-security-policy|refresh/i.test(m.getAttribute('http-equiv'))) m.remove();
     });
     importMap(doc);
-    var portfolioTemplate = doc.createElement('template');
-    portfolioTemplate.innerHTML = "<main data-taxi=\"\" class=\"main-w\"><div data-module=\"nav-show-logo\" data-taxi-view=\"\" data-page=\"home\" class=\"taxi-w\"><section id=\"inicio\" data-gl-scene-start=\"hero\" data-module=\"nav-theme\" data-nav-theme=\"dark\" class=\"s\"><div data-wf--bg-pattern--variant=\"blue\" class=\"g__pattern_bg w-variant-f87aac96-28d7-8507-d6d4-92187d96d745\"><div class=\"g__pattern_overlay\"></div></div><div class=\"c\"><div data-module=\"hero-scrolled\" class=\"hero-home__layout\"><div class=\"hero-home__he\"><div class=\"hero-home__he-desktop\"><h1 data-module=\"header-lined\" data-css=\"header\" class=\"g__he-title\"><p data-header-left-word=\"\" class=\"u-h1\">Julia</p><div data-hide=\"\" data-header-line=\"\" class=\"g__he-line\"></div><p data-header-right-word=\"\" class=\"u-h1 is-g-title-2\">Santana</p></h1></div></div><div data-hero-scrolled=\"\" data-module=\"fade\" data-delay=\"0.5\" class=\"hero-home__content grid-main\"><div class=\"hero-home__col\"><p class=\"text-mono-sm u-text-blue-white\">Área</p><p class=\"u-text-detail\">Inteligência artificial e tecnologia</p></div><div class=\"hero-home__col\"><p class=\"text-mono-sm u-text-blue-white\">Perfil</p><p class=\"u-text-detail\">Estudante técnica de IA</p></div><div class=\"hero-home__col\"><p class=\"text-mono-sm u-text-blue-white\">Projeto</p><p class=\"u-text-detail\">Flowtificial</p></div><div class=\"hero-home__col\"><p class=\"text-mono-sm u-text-blue-white\">Interesses</p><p class=\"u-text-detail\">Pesquisa, teatro e escrita</p></div><div class=\"hero-home__col\"><p class=\"text-mono-sm u-text-blue-white\">Habilidades</p><p class=\"u-text-detail\">IA e tecnologia assistiva</p></div><div class=\"hero-home__col\"><p class=\"text-mono-sm u-text-blue-white\">Contato</p><p class=\"u-text-detail\">Vamos conversar</p></div></div></div></div></section><section id=\"sobre\" data-module=\"nav-theme\" data-nav-theme=\"dark\" class=\"s\"><div data-wf--bg-pattern--variant=\"base\" class=\"g__pattern_bg\"><div class=\"g__pattern_overlay\"></div></div><div class=\"c\"><div class=\"home-content__layout is-200vh\"><div class=\"home-content__track\"><div data-start=\"top 80%\" data-module=\"fade\" data-out=\"\" data-end=\"top 15%\" class=\"home-content__item\"><h2 class=\"u-h1\">Sobre mim</h2><p class=\"u-paragraph\">Sou movida pela curiosidade, pela expressão criativa e pelo trabalho em equipe. O teatro e a escrita me ajudam a exercitar empatia e sensibilidade; o vôlei fortaleceu minha disciplina, resiliência e colaboração.</p></div></div></div></div></section><section id=\"projetos\" data-module=\"nav-theme\" data-nav-theme=\"dark\" class=\"s\"><div data-wf--bg-pattern--variant=\"blue\" class=\"g__pattern_bg w-variant-f87aac96-28d7-8507-d6d4-92187d96d745\"><div class=\"g__pattern_overlay\"></div></div><div class=\"c\"><div class=\"home-content__layout is-200vh\"><div class=\"home-content__track\"><div data-start=\"top 80%\" data-module=\"fade\" data-out=\"\" data-end=\"top 15%\" class=\"home-content__item\"><p class=\"text-mono-sm u-text-blue-white\">Projeto em destaque</p><h2 class=\"u-h1\">Flowtificial</h2><p class=\"u-paragraph\">Pesquisa biotecnológica para desenvolver sangue artificial como alternativa segura e imediata em transfusões de emergência, reduzindo a dependência de compatibilidade sanguínea e a escassez nos bancos de sangue.</p><a href=\"https://flowtificial.vercel.app/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn-w w-inline-block\"><div class=\"btn-inner\"><p class=\"btn-text\">Ver projeto</p></div></a></div></div></div></div></section><section id=\"habilidades\" data-module=\"nav-theme\" data-nav-theme=\"dark\" class=\"s\"><div data-wf--bg-pattern--variant=\"base\" class=\"g__pattern_bg\"><div class=\"g__pattern_overlay\"></div></div><div class=\"c\"><div class=\"home-content__layout is-200vh\"><div class=\"home-content__track\"><div data-start=\"top 80%\" data-module=\"fade\" data-out=\"\" data-end=\"top 15%\" class=\"home-content__item\"><h2 class=\"u-h1\">Habilidades</h2><p class=\"u-paragraph\">Pesquisa e inovação, tecnologia assistiva, escrita criativa, liderança, trabalho em equipe e comunicação de ideias científicas complexas.</p></div></div></div></div></section><section id=\"contato\" data-module=\"nav-theme\" data-nav-theme=\"dark\" class=\"s\"><div data-wf--bg-pattern--variant=\"blue\" class=\"g__pattern_bg w-variant-f87aac96-28d7-8507-d6d4-92187d96d745\"><div class=\"g__pattern_overlay\"></div></div><div class=\"c\"><div class=\"home-content__layout is-200vh\"><div class=\"home-content__track\"><div data-start=\"top 80%\" data-module=\"fade\" class=\"home-content__item\"><h2 class=\"u-h1\">Contato</h2><p class=\"u-paragraph\">Vamos conversar sobre ideias, projetos e oportunidades.</p><a href=\"mailto:juliasantanasilveira4@gmail.com\" class=\"btn-w w-inline-block\"><div class=\"btn-inner\"><p class=\"btn-text\">juliasantanasilveira4@gmail.com</p></div></a><p class=\"u-paragraph\"><a href=\"https://www.linkedin.com/in/juliasantanasilveira/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a></p></div></div></div></div></section></div></main><footer data-nav-theme=\"light\" data-nav-light=\"\" data-gl-scene=\"footer\" data-module=\"nav-theme\" class=\"footer-w\"><div class=\"footer__gradient\"></div><div class=\"c\"><div class=\"footer__layout grid-main\"><div data-hide=\"t\" class=\"footer__content\"><p data-css=\"quote\" data-module=\"paragraph\" class=\"u-h3 is-footer\"><span class=\"u-text-blue\">“</span>Curiosidade, criatividade e tecnologia para transformar ideias em soluções.<span class=\"u-text-blue\">”</span></p></div><div class=\"footer__menu-w\"><div class=\"footer__menu-line\"></div><p class=\"text-mono-sm\">JULIA SANTANA · PORTFÓLIO</p><p class=\"text-mono-sm\">© 2026 Julia Santana</p></div></div></div></footer>";
-    var oldMain = doc.querySelector('main[data-taxi]');
-    var oldFooter = doc.querySelector('footer.footer-w');
-    if (oldMain && oldFooter) {
-      oldMain.replaceWith(portfolioTemplate.content.querySelector('main'));
-      oldFooter.replaceWith(portfolioTemplate.content.querySelector('footer'));
-    }
     doc.title = 'Julia Santana | Portfólio';
     doc.documentElement.lang = 'pt-BR';
     var description = doc.querySelector('meta[name="description"]');
     if (description) description.setAttribute('content', 'Portfólio de Julia Santana, estudante técnica de inteligência artificial.');
+    var ogTitle = doc.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', 'Julia Santana | Portfólio');
+    doc.querySelectorAll('meta[property="og:image"], meta[name="twitter:image"]').forEach(function (meta) { meta.remove(); });
+
     var transitionText = doc.querySelectorAll('[data-transition-text]');
     if (transitionText[0]) transitionText[0].textContent = 'Julia Santana';
     if (transitionText[1]) transitionText[1].textContent = 'Portfólio pessoal';
@@ -1031,22 +1027,147 @@
     var brandLink = doc.querySelector('.nav__logo');
     if (brandLink && brandLink.closest('a')) brandLink.closest('a').setAttribute('href', '#inicio');
     var navInfo = doc.querySelector('.nav__infos');
-    if (navInfo) {
-      navInfo.innerHTML = '<p class="text-mono-sm u-text-blue-light">Inteligência Artificial</p><a class="u-text-detail" href="https://www.linkedin.com/in/juliasantanasilveira/" target="_blank" rel="noopener noreferrer">LinkedIn</a>';
-    }
-    doc.querySelectorAll('meta[property="og:image"], meta[name="twitter:image"]').forEach(function (meta) { meta.remove(); });
-    var links = doc.querySelectorAll('[data-nav-menu-list] a');
-    var items = [['#inicio','Início'],['#projetos','Projetos'],['#sobre','Sobre mim'],['#habilidades','Habilidades'],['#contato','Contato']];
-    links.forEach(function(a,i){ if(!items[i])return; a.setAttribute('href',items[i][0]); var label=a.querySelector('[data-css="btn-text"]'); if(label)label.textContent=items[i][1]; });
-    var canvas = doc.querySelector('.webgl__canvas');
-    if (canvas) canvas.style.opacity = '0';
-    rewriteTree(doc);
-    doc.querySelectorAll('h1').forEach(function (heading) {
-      if (heading.textContent.trim().toUpperCase() === 'TSITSIPAS') {
-        heading.textContent = 'JULIA SANTANA';
-      }
+    if (navInfo) navInfo.innerHTML = '<p class="text-mono-sm u-text-blue-light">Inteligência Artificial</p><a class="u-text-detail" href="https://www.linkedin.com/in/juliasantanasilveira/" target="_blank" rel="noopener noreferrer">LinkedIn</a>';
+
+    var menuLinks = doc.querySelectorAll('[data-nav-menu-list] a');
+    var menuItems = [['#inicio','Início'],['#projetos','Projetos'],['#sobre','Sobre mim'],['#habilidades','Habilidades'],['#contato','Contato']];
+    menuLinks.forEach(function (link, index) {
+      if (!menuItems[index]) return;
+      link.setAttribute('href', menuItems[index][0]);
+      var label = link.querySelector('[data-css="btn-text"]');
+      if (label) label.textContent = menuItems[index][1];
     });
-    var root = doc.documentElement;
+
+    var heroSection = doc.querySelector('.hero-home__layout');
+    if (heroSection) heroSection.closest('section').id = 'inicio';
+    var leftTitle = doc.querySelector('.hero-home__he-desktop [data-header-left-word]');
+    var rightTitle = doc.querySelector('.hero-home__he-desktop [data-header-right-word]');
+    if (leftTitle) leftTitle.textContent = 'Julia';
+    if (rightTitle) rightTitle.textContent = 'Santana';
+    var facts = [
+      ['Área de atuação','Inteligência artificial'],
+      ['Formação','Estudante técnica de IA'],
+      ['Projeto','Flowtificial'],
+      ['Interesses','Pesquisa, teatro e escrita'],
+      ['Habilidades','Tecnologia assistiva e colaboração'],
+      ['Contato','juliasantanasilveira4@gmail.com']
+    ];
+    doc.querySelectorAll('.hero-home__content .hero-home__col').forEach(function (col, index) {
+      if (!facts[index]) return;
+      var lines = col.querySelectorAll('p');
+      if (lines[0]) lines[0].textContent = facts[index][0];
+      if (lines[1]) lines[1].textContent = facts[index][1];
+    });
+    var scrollLink = doc.querySelector('.hero-home__scroll a');
+    if (scrollLink) scrollLink.setAttribute('href', '#destaques');
+    var scrollCopy = doc.querySelector('.hero-home__scroll p');
+    if (scrollCopy) scrollCopy.innerHTML = 'Role a página<br/>para conhecer meu trabalho';
+
+    var spotlight = doc.querySelector('#on-court');
+    if (spotlight) {
+      spotlight.id = 'destaques';
+      var p = spotlight.querySelector('.home-content__item .u-paragraph');
+      if (p) p.textContent = 'Conheça projetos e ideias que unem pesquisa, criatividade e tecnologia.';
+      var link = spotlight.querySelector('.home-content__item a');
+      if (link) { link.setAttribute('href', '#projetos'); var text = link.querySelector('.btn-text'); if (text) text.textContent = 'Ver projetos'; }
+    }
+    var about = doc.querySelector('[data-gl-tag="hero-off-court"]');
+    if (about) {
+      about.id = 'sobre';
+      var p = about.querySelector('.home-content__item .u-paragraph');
+      if (p) p.textContent = 'Sou movida pela curiosidade, pela expressão criativa e pelo trabalho em equipe. O teatro e a escrita exercitam minha empatia e sensibilidade; o vôlei fortaleceu minha disciplina, resiliência e colaboração.';
+      var link = about.querySelector('.home-content__item a');
+      if (link) { link.setAttribute('href', '#habilidades'); var text = link.querySelector('.btn-text'); if (text) text.textContent = 'Conheça minha trajetória'; }
+    }
+
+    var journey = doc.querySelector('.legacy__layout');
+    if (journey) {
+      journey.querySelectorAll('.legacy__he [data-header-left-word]').forEach(function (node) { node.textContent = 'Minha'; });
+      journey.querySelectorAll('.legacy__he [data-header-right-word]').forEach(function (node) { node.textContent = 'trajetória'; });
+      var intro = journey.querySelector('.legacy__content-inner .u-paragraph');
+      if (intro) intro.textContent = 'Áreas que me interessam e habilidades que venho desenvolvendo.';
+      var cards = journey.querySelectorAll('.legacy__cms-li');
+      var entries = [
+        ['Pesquisa','& inovação','Interesse por pesquisa e inovação para transformar ideias científicas em soluções práticas.'],
+        ['Tecnologia','assistiva','Desenvolvimento de tecnologia assistiva com foco em soluções úteis para as pessoas.'],
+        ['Criatividade','& equipe','Teatro, escrita e vôlei fortalecem minha expressão, colaboração e disciplina.']
+      ];
+      cards.forEach(function (card, index) {
+        var entry = entries[index];
+        if (!entry) return;
+        card.querySelectorAll('.legacy__li-title .u-h3').forEach(function (node, n) { node.textContent = entry[n % 2]; });
+        card.querySelectorAll('.legacy__li-content .u-paragraph').forEach(function (node) { node.textContent = entry[2]; });
+      });
+      var section = journey.closest('section');
+      if (section) section.id = 'habilidades';
+    }
+
+    var projectLayout = doc.querySelector('.sponsors-grid__layout');
+    if (projectLayout) {
+      var projectSection = projectLayout.closest('section');
+      if (projectSection) projectSection.id = 'projetos';
+      var intro = projectLayout.querySelector('.sponsors-grid__content .u-paragraph');
+      if (intro) intro.textContent = 'Um projeto de pesquisa biotecnológica voltado a uma alternativa universal para transfusões de emergência.';
+      var action = projectLayout.querySelector('.sponsors-grid__content a');
+      if (action) { action.setAttribute('href', 'https://flowtificial.vercel.app/'); action.setAttribute('target', '_blank'); action.setAttribute('rel', 'noopener noreferrer'); var label = action.querySelector('.btn-text'); if (label) label.textContent = 'Conheça o Flowtificial'; }
+      var title = projectLayout.querySelector('.sponsors-grid__he');
+      if (title) {
+        var titleLeft = title.querySelector('[data-header-left-word]');
+        var titleRight = title.querySelector('[data-header-right-word]');
+        if (titleLeft) titleLeft.textContent = 'Meus';
+        if (titleRight) titleRight.textContent = 'Projetos';
+      }
+      var cards = projectLayout.querySelectorAll('.sponsors-grid__cms-li');
+      if (cards.length) {
+        var card = cards[0];
+        cards.forEach(function (item, index) { if (index > 0) item.remove(); });
+        var cover = card.querySelector('.u-img-cover');
+        var logos = card.querySelectorAll('.sponsors-grid__logo');
+        var coverSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 720"><rect width="980" height="720" fill="#163d73"/><path d="M0 540h980v180H0z" fill="#102c50"/><circle cx="490" cy="310" r="170" fill="none" stroke="#efff44" stroke-width="5"/><text x="490" y="300" text-anchor="middle" fill="#fffdf0" font-family="Arial,sans-serif" font-size="68" font-weight="700">FLOWTIFICIAL</text><text x="490" y="365" text-anchor="middle" fill="#efff44" font-family="Arial,sans-serif" font-size="26">Pesquisa em sangue artificial</text></svg>';
+        var logoWhite = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120"><text x="300" y="88" text-anchor="middle" fill="#fffdf0" font-family="Arial,sans-serif" font-size="78" font-weight="700">Flowtificial</text></svg>';
+        var logoBlue = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120"><text x="300" y="88" text-anchor="middle" fill="#163d73" font-family="Arial,sans-serif" font-size="78" font-weight="700">Flowtificial</text></svg>';
+        if (cover) { cover.setAttribute('src', 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(coverSvg)); cover.removeAttribute('srcset'); cover.setAttribute('alt', 'Flowtificial — pesquisa em sangue artificial'); }
+        if (logos[0]) { logos[0].setAttribute('src', 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(logoWhite)); logos[0].setAttribute('alt', 'Flowtificial'); }
+        if (logos[1]) { logos[1].setAttribute('src', 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(logoBlue)); logos[1].setAttribute('alt', 'Flowtificial'); }
+      }
+    }
+
+    var projectPoints = doc.querySelectorAll('.gl-projection__point');
+    var pointNames = ['Flowtificial','Pesquisa','Tecnologia assistiva','Escrita','Colaboração'];
+    projectPoints.forEach(function (point, index) {
+      var label = point.querySelector('.gl-projection__point-content .u-text-yellow');
+      if (label) label.textContent = index === 0 ? 'Projeto' : 'Interesse';
+      var name = point.querySelector('.gl-projection__content-inner .text-mono-sm');
+      if (name) name.textContent = pointNames[index] || 'Portfólio';
+      var link = point.querySelector('.gl-projection__link');
+      if (link) { link.setAttribute('href', index === 0 ? 'https://flowtificial.vercel.app/' : '#habilidades'); if (index === 0) link.setAttribute('target', '_blank'); else link.removeAttribute('target'); }
+    });
+
+    var footer = doc.querySelector('footer.footer-w');
+    if (footer) {
+      footer.id = 'contato';
+      var quote = footer.querySelector('[data-css="quote"]');
+      if (quote) quote.innerHTML = '<span class="u-text-blue">“</span>Curiosidade, criatividade e tecnologia para transformar ideias em soluções.<span class="u-text-blue">”</span>';
+      var signature = footer.querySelector('.g__signature');
+      if (signature) signature.remove();
+      var footerMenuLinks = footer.querySelectorAll('.footer__menu-w a[data-link-item]');
+      var footerItems = [['#inicio','Início'],['#projetos','Projetos'],['#sobre','Sobre mim'],['#habilidades','Habilidades'],['#contato','Contato']];
+      footerMenuLinks.forEach(function (link, index) {
+        if (!footerItems[index]) return;
+        link.setAttribute('href', footerItems[index][0]);
+        var label = link.querySelector('[data-css="btn-text"]');
+        if (label) label.textContent = footerItems[index][1];
+      });
+      var socials = footer.querySelectorAll('.footer-social-link');
+      if (socials[0]) { socials[0].setAttribute('href', 'https://www.linkedin.com/in/juliasantanasilveira/'); var socialLabel = socials[0].querySelector('.footer-social-text'); if (socialLabel) socialLabel.textContent = 'LinkedIn'; }
+      socials.forEach(function (link, index) { if (index > 0) link.remove(); });
+      var contactLink = footer.querySelector('.footer__links-inner a, a[href="https://iconicogroup.com/"]');
+      if (contactLink) { contactLink.setAttribute('href', 'mailto:juliasantanasilveira4@gmail.com'); var label = contactLink.querySelector('[data-css="btn-text"]'); if (label) label.textContent = 'Vamos conversar'; }
+      footer.querySelectorAll('a[href*="/legal/"]').forEach(function (link) { link.remove(); });
+      var copyright = Array.prototype.find.call(footer.querySelectorAll('p'), function (p) { return /©/.test(p.textContent); });
+      if (copyright) copyright.textContent = '© 2026 Julia Santana. Todos os direitos reservados.';
+    }
+    rewriteTree(doc);    var root = doc.documentElement;
     var attrs = Array.prototype.map.call(root.attributes, function (a) {
       return ' ' + a.name + '="' + a.value.replace(/&/g, '&amp;').replace(/"/g, '&quot;') + '"';
     }).join('');
