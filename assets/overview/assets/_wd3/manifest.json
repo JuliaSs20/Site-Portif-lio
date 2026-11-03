@@ -636,6 +636,18 @@
    "passes": [
     "desktop"
    ]
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/models/stefanos-statue-colorida.glb",
+   "file": "assets/stefanos.itsoffbrand.io/models/stefanos-statue-colorida.glb",
+   "type": "application/octet-stream",
+   "resourceType": "fetch",
+   "size": 2618056,
+   "status": 200,
+   "party": "third",
+   "passes": [
+    "desktop"
+   ]
   }
  ]
 }

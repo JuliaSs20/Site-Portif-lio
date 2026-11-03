@@ -1205,6 +1205,25 @@
    ],
    "file": "assets/cdn.prod.website-files.com/697cbd4d306021d0cc247ad9/6a4b9ca022abec2ec025c8d0_FavIcon.png",
    "size": 34636
+  },
+  {
+   "url": "https://stefanos.itsoffbrand.io/models/stefanos-statue-colorida.glb",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/octet-stream",
+   "headers": {
+    "access-control-allow-origin": "https://tsitsipas.com",
+    "content-type": "application/octet-stream"
+   },
+   "resourceType": "fetch",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/stefanos.itsoffbrand.io/models/stefanos-statue-colorida.glb",
+   "size": 2618056,
+   "modes": [
+    "cors"
+   ]
   }
  ],
  "videos": {
