@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 720" role="img" aria-labelledby="title desc">
+  <title id="title">Manguito Tech</title>
+  <desc id="desc">Ilustração de um manguito esportivo com detalhes tecnológicos.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163d73"/>
+      <stop offset="1" stop-color="#0c2545"/>
+    </linearGradient>
+    <linearGradient id="fabric" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f1e4"/>
+      <stop offset="1" stop-color="#c9d5df"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#edb996"/>
+      <stop offset="1" stop-color="#c98368"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="980" height="720" fill="url(#bg)"/>
+  <g fill="none" stroke="#8bb5e3" stroke-opacity=".18">
+    <path d="M0 120h980M0 240h980M0 360h980M0 480h980M0 600h980"/>
+    <path d="M120 0v720M240 0v720M360 0v720M480 0v720M600 0v720M720 0v720M840 0v720"/>
+  </g>
+  <circle cx="740" cy="165" r="150" fill="#2f5f94" opacity=".22"/>
+  <ellipse cx="506" cy="568" rx="260" ry="38" fill="#06172b" opacity=".55" filter="url(#shadow)"/>
+  <g transform="rotate(-17 490 365)">
+    <path d="M240 385c9-79 69-139 148-153l273-48c44-8 84 21 92 64s-21 84-64 92l-263 47c-29 5-52 28-55 57l-5 55c-3 36-35 63-71 60s-63-35-60-71z" fill="url(#skin)"/>
+    <path d="M416 242l235-42c39-7 76 19 83 58l11 58c6 31-15 60-45 65l-257 46c-18 3-35-9-38-27l-20-118c-3-18 9-35 27-40z" fill="#122e53" stroke="#c8d7e6" stroke-width="8"/>
+    <path d="M440 258l190-34c20-4 39 10 43 30l8 43c4 20-10 39-30 43l-191 34c-20 4-39-10-43-30l-8-43c-4-20 10-39 31-43z" fill="url(#fabric)"/>
+    <rect x="490" y="268" width="105" height="55" rx="14" fill="#163d73"/>
+    <rect x="506" y="282" width="72" height="27" rx="7" fill="#d8f2ed"/>
+    <circle cx="565" cy="295" r="5" fill="#5ce0bd"/>
+    <path d="M448 340l195-35" stroke="#efff44" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+    <path d="M307 387c22-27 50-44 82-51M304 408c26-28 55-46 91-54" fill="none" stroke="#f4d1bd" stroke-width="8" stroke-linecap="round" opacity=".62"/>
+  </g>
+  <g fill="#efff44" opacity=".85">
+    <circle cx="195" cy="193" r="5"/><circle cx="220" cy="193" r="5"/><circle cx="245" cy="193" r="5"/>
+  </g>
+  <path d="M130 535h170M130 550h112" stroke="#8bb5e3" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+</svg>

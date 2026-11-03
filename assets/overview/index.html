@@ -1204,18 +1204,12 @@
     var projectPhotos = [
       ['/assets/overview/assets/portfolio-photos/projeto-flowtificial.png', 'Tela inicial do projeto Flowtificial'],
       ['/assets/overview/assets/portfolio-photos/game-jam-medal.png', 'Medalha do evento Game Jam Next'],
-      null
+      ['/assets/overview/assets/portfolio-photos/manguito-tech.svg', 'Ilustração do manguito esportivo com detalhes tecnológicos']
     ];
     doc.querySelectorAll('.sponsors-grid__layout .sponsors-grid__cms-li').forEach(function (card, index) {
       var photo = projectPhotos[index];
       var image = card.querySelector('.u-img-cover');
       if (!image) return;
-      if (!photo) {
-        image.removeAttribute('src');
-        image.removeAttribute('srcset');
-        SA.call(image, 'alt', '');
-        return;
-      }
       SA.call(image, 'src', photo[0]);
       image.removeAttribute('srcset');
       SA.call(image, 'alt', photo[1]);
