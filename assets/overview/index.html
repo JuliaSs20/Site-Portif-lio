@@ -1104,7 +1104,7 @@
         card.querySelectorAll('.legacy__li-overlay .u-paragraph').forEach(function (node, n) { node.textContent = entry[n + 2] || ''; });
       });
       var cardContrast = doc.createElement('style');
-      cardContrast.textContent = '.legacy__layout .legacy__cms-li .u-img-cover{opacity:.38;transition:opacity .5s cubic-bezier(.4,0,0,1),transform .5s cubic-bezier(.4,0,0,1)}.legacy__layout .legacy__cms-li .legacy__li-title{opacity:1;transition:opacity .5s cubic-bezier(.4,0,0,1)}@media (hover:hover) and (pointer:fine){.legacy__layout .legacy__cms-li:hover .u-img-cover{opacity:1}.legacy__layout .legacy__cms-li:hover .legacy__li-title{opacity:.65}}';
+      cardContrast.textContent = '.legacy__layout .legacy__cms-li .u-img-cover{opacity:.38;transition:opacity .5s cubic-bezier(.4,0,0,1),transform .5s cubic-bezier(.4,0,0,1)}.legacy__layout .legacy__cms-li.is-open .u-img-cover{transform:translateX(20%) scale(1.12)}.legacy__layout .legacy__cms-li .legacy__li-title{opacity:1;transition:opacity .5s cubic-bezier(.4,0,0,1)}@media (hover:hover) and (pointer:fine){.legacy__layout .legacy__cms-li:hover .u-img-cover{opacity:1}.legacy__layout .legacy__cms-li:hover .legacy__li-title{opacity:.65}}';
       doc.head.appendChild(cardContrast);
       var section = journey.closest('section');
       if (section) section.id = 'habilidades';
