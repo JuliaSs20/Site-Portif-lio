@@ -1090,18 +1090,18 @@
         journeyTitle.querySelectorAll('[data-header-right-word]').forEach(function (node) { node.textContent = 'trajetória'; });
       }
       var intro = journey.querySelector('.legacy__content-inner .u-paragraph');
-      if (intro) intro.textContent = 'As experiências que moldaram minha trajetória e influenciam quem sou além dos estudos e dos projetos.';
+      if (intro) intro.textContent = 'Minha trajetória é feita de encontros, descobertas e experiências que me ajudam a crescer. As amizades, o carinho pelos animais e o trabalho em equipe fazem parte de quem sou e inspiram meu jeito de aprender e criar.';
       var cards = journey.querySelectorAll('.legacy__cms-li');
       var entries = [
-        ['Amizade','e companheirismo','As amizades que construí ao longo da minha trajetória tornam os momentos especiais e me ensinam a apoiar e confiar nas pessoas ao meu redor. Em momentos compartilhados com amigas, encontro alegria, acolhimento e boas lembranças.','O companheirismo aparece na escuta, no cuidado e na parceria. Valorizo as conexões que construo e a forma como crescemos juntas, colaborando e celebrando as experiências do caminho.'],
-        ['Mundo','Felino','Minha relação com os gatos é cheia de carinho, companhia e pequenas descobertas. A convivência com eles me ensina a observar, cuidar e respeitar o tempo e a personalidade de cada um.','Cuidar dos meus gatos também envolve atenção à rotina e ao bem-estar deles. Este espaço celebra o afeto e as alegrias que fazem parte do meu mundo felino.'],
-        ['Criatividade','& equipe','Escrever e participar de peças de teatro são formas de expressar ideias, observar diferentes perspectivas e desenvolver sensibilidade. Essas experiências também fortalecem minha comunicação e criatividade.','No vôlei, aprendi disciplina, resiliência e confiança no trabalho coletivo. Levo esse espírito para os estudos e projetos, contribuindo, ouvindo e construindo junto com outras pessoas.']
+        ['Amizade','e companheirismo','As amizades que construí tornam meus dias mais leves e cheios de boas lembranças. Ao lado das minhas amigas, compartilho risadas, conversas e momentos que guardo com carinho.','Essas relações também me ensinam sobre confiança, cuidado e apoio mútuo. Gosto de estar presente para quem é importante para mim e de celebrar cada experiência que vivemos juntas.'],
+        ['Mundo','Felino','Os gatos fazem parte da minha vida com seu jeito único de demonstrar carinho e curiosidade. A convivência com eles me traz companhia e muitos momentos divertidos.','Cuidar deles me ensina a ter atenção, paciência e respeito pelo tempo de cada um. Meu mundo felino é feito de afeto, descobertas e pequenas alegrias do dia a dia.'],
+        ['Criatividade','& equipe','O teatro e a escrita me permitem criar, comunicar ideias e conhecer diferentes perspectivas. Cada experiência fortalece minha criatividade, minha expressão e minha confiança.','No vôlei, aprendi que cooperação, disciplina e confiança fazem diferença para todo o time. Levo esse espírito para os estudos e projetos, ouvindo, contribuindo e construindo junto com outras pessoas.']
       ];
       cards.forEach(function (card, index) {
         var entry = entries[index];
         if (!entry) return;
         card.querySelectorAll('.legacy__li-title .u-h3').forEach(function (node, n) { node.textContent = entry[n % 2]; });
-        card.querySelectorAll('.legacy__li-content .u-paragraph').forEach(function (node, n) { node.textContent = entry[n + 2] || ''; });
+        card.querySelectorAll('.legacy__li-overlay .u-paragraph').forEach(function (node, n) { node.textContent = entry[n + 2] || ''; });
       });
       var cardContrast = doc.createElement('style');
       cardContrast.textContent = '.legacy__layout .legacy__cms-li .u-img-cover{opacity:.38;transition:opacity .5s cubic-bezier(.4,0,0,1),transform .5s cubic-bezier(.4,0,0,1)}.legacy__layout .legacy__cms-li .legacy__li-title{opacity:1;transition:opacity .5s cubic-bezier(.4,0,0,1)}@media (hover:hover) and (pointer:fine){.legacy__layout .legacy__cms-li:hover .u-img-cover{opacity:1}.legacy__layout .legacy__cms-li:hover .legacy__li-title{opacity:.65}}';
